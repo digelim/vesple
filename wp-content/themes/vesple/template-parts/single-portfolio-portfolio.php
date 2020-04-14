@@ -253,6 +253,13 @@
         </div>
         <#
         } #>
+        <div class="recommendations-wrapper m-t-150 align-center">
+          <h1 class="m-b-30">Did you know you can invest with 0% comission?</h1>
+          <p class="label-m2 m-b-70 dark">Vesple partners with the leading social investing platform, eToro, now offering 0% comission on all stocks.</p>
+          <div class="align-center">
+            <a href="http://partners.etoro.com/B11738_A88838_TClick_SVesple.aspx" target="_blank"><img src="<?php echo bloginfo('stylesheet_directory'); ?>/img/etoro.png" alt="Create an account"></a>
+          </div>
+        </div>
         <svg height="10" width="10" xmlns="http://www.w3.org/2000/svg" version="1.1">
           <defs>
             <pattern id="diagonal-stripe-1" patternUnits="userSpaceOnUse" width="6" height="6">
