@@ -14543,14 +14543,6 @@ function update_prices( $offset ) {
 			'post_status' => 'publish',
 			'numberposts' => 2500,
 			'offset' => intval( $offset ),
-			'meta_query'	=> array(
-				'relation'		=> 'AND',
-				array(
-					'key' => 'returns',
-					'value' => '',
-					'compare' => '=',
-				),
-			),
 		)
 	);
 
