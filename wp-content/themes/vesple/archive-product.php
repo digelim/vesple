@@ -5,8 +5,8 @@ get_header();
 <div class="assets-popup-overlay">
       <div class="subscription-pupup card">
           <a href="<?php echo home_url('portfolio') ?>"><span class="icon-delete" id="close-subscription-popup"></span></a>
-          <h1 class="label-m1 align-center">You've reached your limit. Pick a plan to continue</h1>
-          <h2 class="label-s2 light m-t-5 align-center">All plans give you unlimited access.</h2>
+          <h1 class="label-m1 align-center">You've reached your limit</h1>
+          <h2 class="label-s2 light m-t-5 align-center">You exceeded the limit of 5 optimizations per month. Please upgrade your plan to get unlimited access.</h2>
           <div class="plans-box m-t-30 row flex-nowrap no-gutters justify-content-around">
 
           <?php
