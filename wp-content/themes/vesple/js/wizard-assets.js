@@ -208,14 +208,15 @@ jQuery(document).ready(function($) {
 
             graph.render();
           }
+          
+          existingAssets.push(symbol);
+
         } else {
-          alert('Sorry, we don\'t have enough data for the selected asset.');
+          alert('Sorry, there is not enough data for the selected asset.');
         }
       }).error(function(error) {
         console.log(error);
       });
-
-      existingAssets.push(symbol);
     }
   }
 
