@@ -152,60 +152,64 @@ jQuery(document).ready(function($) {
     // Append new asset item here
     if (existingAssets.indexOf(symbol) <= 0) {
       $.getJSON('https://vesple.com/asset/' + symbol, function(apiData) {
-        var dates = Object.keys(apiData.returns);
+        if (apiData.returns) {
+          var dates = Object.keys(apiData.returns);
 
-        var data = dates.map(function(date, index, array) {
-          return {
-            close: apiData.returns[date].close,
-            date: date,
-            change: array[index+1] ? (apiData.returns[date].close - apiData.returns[array[index+1]].close) / apiData.returns[array[index+1]].close : 0,
-            x: index,
-            y: apiData.returns[date].close,
-          };
-        }).slice(-365);
+          var data = dates.map(function(date, index, array) {
+            return {
+              close: apiData.returns[date].close,
+              date: date,
+              change: array[index+1] ? (apiData.returns[date].close - apiData.returns[array[index+1]].close) / apiData.returns[array[index+1]].close : 0,
+              x: index,
+              y: apiData.returns[date].close,
+            };
+          }).slice(-365);
 
-        data = simplify(data, 3.2, true);
+          data = simplify(data, 3.2, true);
 
-        var assetContent = {
-          color: apiData.returns[dates[dates.length - 1]].change >= 0 ? '#37c171' : '#ed0123',
-          signal: apiData.returns[dates[dates.length - 1]].change > 0 ? '+' : '',
-          cents: (apiData.returns[dates[dates.length - 1]].close - apiData.returns[dates[dates.length - 2]].close).toFixed(2),
-          symbol: symbol,
-          name: name,
-          close: apiData.returns[dates[dates.length - 1]].close,
-          change: apiData.returns[dates[dates.length - 1]].change,
-          exchange: apiData.exchange,
-          currency: apiData.currency,
-          quantity: quantity,
-        }
+          var assetContent = {
+            color: apiData.returns[dates[dates.length - 1]].change >= 0 ? '#37c171' : '#ed0123',
+            signal: apiData.returns[dates[dates.length - 1]].change > 0 ? '+' : '',
+            cents: (apiData.returns[dates[dates.length - 1]].close - apiData.returns[dates[dates.length - 2]].close).toFixed(2),
+            symbol: symbol,
+            name: name,
+            close: apiData.returns[dates[dates.length - 1]].close,
+            change: apiData.returns[dates[dates.length - 1]].change,
+            exchange: apiData.exchange,
+            currency: apiData.currency,
+            quantity: quantity,
+          }
 
-        var template = wp.template('assets-list');
+          var template = wp.template('assets-list');
 
-        $('.assets-list ul').append(template(assetContent));
+          $('.assets-list ul').append(template(assetContent));
 
-        $('[data-remove="item-' + symbol + '"]').on('click', function(e) {
-          e.preventDefault();
-          $('#item-' + symbol).remove();
-        });
-
-        var element = document.querySelector('#a-' + symbol.replace(/\./g, '\\\.'));
-
-        if (element) {
-          var graph = new Rickshaw.Graph({
-            element,
-            renderer: 'area',
-            series: [,
-              {
-                color: 'url(#diagonal-stripe-1)',
-                className: 'chart2-current',
-                name: 'Portfolio atual',
-                data: data,
-              }
-            ],
-            interpolation: 'cardinal',
+          $('[data-remove="item-' + symbol + '"]').on('click', function(e) {
+            e.preventDefault();
+            $('#item-' + symbol).remove();
           });
 
-          graph.render();
+          var element = document.querySelector('#a-' + symbol.replace(/\./g, '\\\.'));
+
+          if (element) {
+            var graph = new Rickshaw.Graph({
+              element,
+              renderer: 'area',
+              series: [,
+                {
+                  color: 'url(#diagonal-stripe-1)',
+                  className: 'chart2-current',
+                  name: 'Portfolio atual',
+                  data: data,
+                }
+              ],
+              interpolation: 'cardinal',
+            });
+
+            graph.render();
+          }
+        } else {
+          alert('Sorry, we don\'t have enough data for the selected asset.');
         }
       }).error(function(error) {
         console.log(error);
@@ -285,34 +289,15 @@ jQuery(document).ready(function($) {
   for (var i = 0; i < assetsToLoad.length; i++) {
     appendAsset(assetsToLoad[i].symbol, assetsToLoad[i].name, assetsToLoad[i].quantity);
   }
+
+  $('form').on('submit', function(event) {
+    event.preventDefault();
+
+    if ($('[name="symbols[]"]').length === 0) {
+      alert('Please, add at least one asset to your portfolio.');
+    }
+  })
 });
 
 
 $ = jQuery;
-
-// $(window).load(function() {
-//   $('.add-shares-btn').on('click', function() {
-//     var symbol = $(this).attr('data-symbol');
-//     var quantity = $(this).find('[name="stock-quantity[]"]').val();
-//     var template = wp.template('selected-assets');
-//
-//     var content = {
-//       symbol: symbol,
-//       quantity: quantity,
-//     }
-//
-//     $('#selected-assets').append(template(content));
-//
-//     // $('#edit-quantity-' + symbol.replace(/\./g, '\\\.')).on('click', function(event) {
-//     //   event.preventDefault();
-//     //
-//     //   var quantity = $(this).parent().find('[name="stocks-amount"]').val();
-//     //
-//     //   $('#item-' + symbol.replace(/\./g, '\\\.')).find('[name="stock-quantity[]"]').val(quantity);
-//     //   $('#item-' + symbol.replace(/\./g, '\\\.') + ' span b').text(quantity);
-//     //   $('.assets-popup-overlay').remove();
-//     //
-//     // });
-//
-//   });
-// })

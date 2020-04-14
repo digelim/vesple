@@ -17,6 +17,12 @@ window.observe = {
 window.observe.simulationYears = 5;
 
 jQuery(document).ready(function($) {
+  $(window).keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
   // Accept numbers only
   $.fn.inputFilter = function(inputFilter) {
     return this.on("input keydown keyup mousedown mouseup select contextmenu drop", function() {
@@ -70,7 +76,7 @@ jQuery(document).ready(function($) {
   });
 
   if ($('body').hasClass('page-id-5')) {
-    init();  
+    init();
   }
 });
 

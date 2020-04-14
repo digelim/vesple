@@ -32,18 +32,6 @@
       <label>Initial investment</label>
     </div>
     <div class="group material-design big">
-      <input type="text" class="input-mask" name="dividends" required="required" value="<?php echo get_field('dividends'); ?>">
-      <span class="bar"></span>
-      <label>Dividend yield</label>
-      <div class="label-s1 caps m-t-10">The average percent of dividends paid by the selected assets for one year.</div>
-    </div>
-    <div class="group material-design big">
-      <input type="text" class="input-mask" name="dividends-growth" required="required" value="<?php echo get_field('dividends_growth'); ?>">
-      <span class="bar"></span>
-      <label>Annual dividend growth rate</label>
-      <div class="label-s1 caps m-t-10">For the S&P500, the historical dividends growth rate is about 6%.</div>
-    </div>
-    <div class="group material-design big">
       <input type="text" class="input-mask" name="inflation" required="required" value="<?php echo get_field('inflation'); ?>">
       <span class="bar"></span>
       <label>Inflation rate</label>

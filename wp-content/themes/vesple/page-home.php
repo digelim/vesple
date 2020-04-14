@@ -41,7 +41,7 @@ get_header();
     <div class="benefits-col col-md-4">
 			<img class="m-b-30" src="<?php echo bloginfo('stylesheet_directory'); ?>/img/savings.svg" alt="Image">
       <h5 class="m-b-15">Simulate your results</h5>
-      <p class="large">Enter the amount, frequency of investments and dividends and learn how to achieve your goals. Say goodbye to spreadsheets.</p>
+      <p class="large">Enter the amount and frequency of investments and learn how to achieve your goals. Say goodbye to spreadsheets.</p>
     </div>
     <div class="benefits-col col-md-4">
       <img class="m-b-30" src="<?php echo bloginfo('stylesheet_directory'); ?>/img/search.svg" alt="Image">

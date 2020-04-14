@@ -28,7 +28,7 @@
     <div class="container">
         <div class="group material-design with-icon assets-search">
           <input class="form-control typeahead" autocomplete="off" data-limit="10" spellcheck="off" name="assets"
-           data-source="assets" data-template="assets_suggestion" data-value-key="name" type="text" placeholder="Add your favorite stocks to simulate" data-select="select"/>
+           data-source="assets" data-template="assets_suggestion" data-value-key="name" type="text" placeholder="Add your favorite stocks here" data-select="select"/>
           <span class="icon-input-search"></span>
           <span class="bar"></span>
           <!-- <div class="tags-list">
@@ -66,8 +66,8 @@
                       <span class="label-s1 light">{{{data.currency}}}</span>
                     </div>
                     <div class="right">
-                      <span class="label-m1 dark">{{{data.close}}}</span>
-                      <span class="label-s1" style="color: {{{data.color}}};">{{{data.signal}}}{{{data.change}}}({{{data.cents}}})</span>
+                      <span class="label-m1 dark">${{{data.close}}}</span>
+                      <span class="label-s1" style="color: {{{data.color}}};">{{{data.signal}}}{{{data.change}}}(${{{data.cents}}})</span>
                     </div>
                   </div>
                 </div>

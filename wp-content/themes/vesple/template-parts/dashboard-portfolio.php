@@ -213,9 +213,9 @@ foreach ( $assets as $key => $asset ) {
             </li>
             <li class="dividend-yield">
               <div class="performance-item-content">
-                <div class="label-l1 dark bold m-b-10"><?php echo get_field('dividends', $post_id); ?>%</div>
+                <div class="label-l1 dark bold m-b-10"><?php echo get_field('inflation', $post_id); ?>%</div>
                 <div class="label-s2 light caps">
-                  dividend yield
+                  inflation
                 </div>
               </div>
               <span class="icon-dividend-circle"><span class="path1"></span><span class="path2"></span></span>

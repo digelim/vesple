@@ -353,11 +353,11 @@ function portfolioReturnsGenerator(result, risk) {
 };
 
 // Generates the expected results data for displaying a chart
-function expectedResults(simulationYears, monthlyResults, initialInvestment, dividends, dividendsGrowth, inflation, regularMonthsPeriod, regularInvestment, regularInvestmentGrowthRate, portfolioValue) {
+function expectedResults(simulationYears, monthlyResults, initialInvestment, 0, 0, inflation, regularMonthsPeriod, regularInvestment, regularInvestmentGrowthRate, portfolioValue) {
   var months = Math.min(360, simulationYears * 12);
   var percent = 1;
   initialInvestment = parseInt(initialInvestment);
-  dividendsGrowth = parseFloat(dividendsGrowth);
+  dividendsGrowth = 0;
   inflation = parseFloat(inflation);
   regularInvestmentGrowthRate = parseFloat(regularInvestmentGrowthRate);
   regularInvestment = parseInt(regularInvestment);
@@ -604,11 +604,11 @@ jQuery(document).ready(function($) {
       var optimalMonthlyReturn = _monthlyReturns(optimalPortfolioReturn);
       var optimalMonthlyReturns = portfolioReturnsGenerator(optimalMonthlyReturn, optimalMonthlyVolatility);
       var currentMonthlyReturns = portfolioReturnsGenerator(currentMonthlyReturn, currentMonthlyVolatility);
-      var dividendsGrowth = investment.dividendsGrowth;
+      var dividendsGrowth = 0;
       var inflation = investment.inflation;
       var regularInvestmentGrowthRate = investment.regularInvestmentGrowthRate;
-      var portfolioCurrentExpectedResults = expectedResults(30, currentMonthlyReturns, investment.iWillInvest, investment.dividends/100, dividendsGrowth, inflation, investment.regularMonthsPeriod, investment.regularInvestment, regularInvestmentGrowthRate, portfolioValue);
-      var portfolioOptimalExpectedResults = expectedResults(30, optimalMonthlyReturns, investment.iWillInvest, investment.dividends/100, dividendsGrowth, inflation, investment.regularMonthsPeriod, investment.regularInvestment, regularInvestmentGrowthRate, portfolioValue);
+      var portfolioCurrentExpectedResults = expectedResults(30, currentMonthlyReturns, investment.iWillInvest, 0, 0, inflation, investment.regularMonthsPeriod, investment.regularInvestment, regularInvestmentGrowthRate, portfolioValue);
+      var portfolioOptimalExpectedResults = expectedResults(30, optimalMonthlyReturns, investment.iWillInvest, 0, 0, inflation, investment.regularMonthsPeriod, investment.regularInvestment, regularInvestmentGrowthRate, portfolioValue);
       var comparisonData = getComparisonData(assets, currentAssetsPercents, optimalAssetsPercents);
 
       // Portfolio optimization results

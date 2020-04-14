@@ -15,8 +15,6 @@ jQuery(document).ready(function($) {
   });
 
   $('[name="regular-investment-growth-rate"]').mask('00,00%', {reverse: true, clearMaskOnSubmit: true});
-  $('[name="dividends"]').mask('00,00%', {reverse: true, clearMaskOnSubmit: true});
-  $('[name="dividends-growth"]').mask('00,00%', {reverse: true, clearMaskOnSubmit: true});
   $('[name="inflation"]').mask('00,00%', {reverse: true, clearMaskOnSubmit: true});
 
   $('[name="investment-amount"]').mask('000.000.000.000.000', {reverse: true, clearMaskOnSubmit: true});

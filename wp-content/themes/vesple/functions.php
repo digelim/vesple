@@ -13544,20 +13544,16 @@ function project_scripts() {
 		wp_enqueue_script('wizard-portfolio', get_stylesheet_directory_uri() . '/js/wizard-portfolio.js' );
 
  		$i_will_invest = get_field('initial_investment', $post_id );
- 		$dividends = get_field('dividends', $post_id );
  		$regular_investment_interval = get_field('investment_interval', $post_id );
  		$regular_investment_amount = get_field('investment_amount', $post_id );
-		$dividends_growth = get_field( 'dividends_growth', $post_id );
 		$inflation = get_field( 'inflation', $post_id );
 		$regular_investment_growth_rate = get_field( 'regular_investment_growth_rate', $post_id );
 
  		wp_localize_script( 'wizard-portfolio', 'assets', $assets );
  		wp_localize_script( 'main-js', 'investment', array(
  			'iWillInvest' => $i_will_invest,
- 			'dividends' => $dividends,
  			'regularMonthsPeriod' => $regular_investment_interval,
  			'regularInvestment' => $regular_investment_amount,
-			'dividendsGrowth' => $dividends_growth,
 			'inflation' => $inflation,
 			'regularInvestmentGrowthRate' => $regular_investment_growth_rate,
  		));
@@ -14761,8 +14757,6 @@ function update_portfolio_investment() {
 	$optimal_weights = $_POST['optimal_weights'];
 	$initial_investment = intval( $_POST['investment-value'] );
 	$regular_investment = $_POST['radio-group'] === 'on' ? true : false;
-	$dividends = floatval( $_POST['dividends'] );
-	$dividends_growth = floatval( $_POST['dividends-growth'] );
 	$inflation = floatval( $_POST['inflation'] );
 	$regular_investment_growth_rate = floatval( $_POST['regular-investment-growth-rate'] );
 	$investment_interval = $regular_investment ? intval( $_POST['investment-interval'] ) : 0;
@@ -14775,8 +14769,6 @@ function update_portfolio_investment() {
 		update_field( 'regular_investment', $regular_investment, $post_id );
 		update_field( 'investment_interval', $investment_interval, $post_id );
 		update_field( 'investment_amount', $investment_amount, $post_id );
-		update_field( 'dividends', $dividends, $post_id );
-		update_field( 'dividends_growth', $dividends_growth, $post_id );
 		update_field( 'inflation', $inflation, $post_id );
 		update_field( 'regular_investment_growth_rate', $regular_investment_growth_rate, $post_id );
 	}

@@ -91,7 +91,7 @@
                 {{{(data.optimalMonthlyReturn * 100).toFixed(2)}}}%
               </div>
               <div class="label-s1 dark bold">
-                / month + dividends
+                / month
               </div>
             </li>
             <li>
