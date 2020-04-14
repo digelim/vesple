@@ -77,6 +77,33 @@
                   <span class="icon-edit m-l-10" style="margin-right: -15px"></span>
                   <div class="label-s1 light caps m-t-5">shares</div>
                 </div>
+                <#
+                $ = jQuery;
+                
+                $('#edit-shares-' + data.symbol.replace(/\./g, '\\\.')).on('click', function() {
+                  var template = wp.template('selected-assets');
+                  var quantity = $(this).parent().find('[name="stocks-amount"]').val();
+
+                  var content = {
+                    symbol: data.symbol,
+                    quantity: quantity,
+                  }
+
+                  $('#selected-assets').append(template(content));
+
+                  $('#save-quantity-' + data.symbol.replace(/\./g, '\\\.')).on('click', function(event) {
+                    event.preventDefault();
+
+                    var quantity = $(this).parent().find('[name="stocks-amount"]').val();
+
+                    $('#item-' + data.symbol.replace(/\./g, '\\\.')).find('[name="stock-quantity[]"]').val(quantity);
+                    $('#item-' + data.symbol.replace(/\./g, '\\\.') + ' span b').text(quantity);
+                    $('.assets-popup-overlay').remove();
+
+                  });
+
+                });
+                #>
               </li>
             </script>
           </ul>

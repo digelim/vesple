@@ -250,31 +250,6 @@ jQuery(document).ready(function($) {
       }
 
       $('.assets-popup-overlay').remove();
-
-      $('#edit-shares-' + suggestion.symbol.replace(/\./g, '\\\.')).on('click', function() {
-        var template = wp.template('selected-assets');
-        var quantity = $(this).parent().find('[name="stocks-amount"]').val();
-
-        var content = {
-          symbol: suggestion.symbol,
-          quantity: quantity,
-        }
-
-        $('#selected-assets').append(template(content));
-
-        $('#save-quantity-' + suggestion.symbol.replace(/\./g, '\\\.')).on('click', function(event) {
-          event.preventDefault();
-
-          var quantity = $(this).parent().find('[name="stocks-amount"]').val();
-
-          $('#item-' + suggestion.symbol.replace(/\./g, '\\\.')).find('[name="stock-quantity[]"]').val(quantity);
-          $('#item-' + suggestion.symbol.replace(/\./g, '\\\.') + ' span b').text(quantity);
-          $('.assets-popup-overlay').remove();
-
-        });
-
-      });
-
     });
 
     $('#close-assets-popup').on('click', function(event) {
