@@ -353,7 +353,7 @@ function portfolioReturnsGenerator(result, risk) {
 };
 
 // Generates the expected results data for displaying a chart
-function expectedResults(simulationYears, monthlyResults, initialInvestment, 0, 0, inflation, regularMonthsPeriod, regularInvestment, regularInvestmentGrowthRate, portfolioValue) {
+function expectedResults(simulationYears, monthlyResults, initialInvestment, dividends, dividendsGrowth, inflation, regularMonthsPeriod, regularInvestment, regularInvestmentGrowthRate, portfolioValue) {
   var months = Math.min(360, simulationYears * 12);
   var percent = 1;
   initialInvestment = parseInt(initialInvestment);
