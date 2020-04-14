@@ -295,6 +295,8 @@ jQuery(document).ready(function($) {
 
     if ($('[name="symbols[]"]').length === 0) {
       alert('Please, add at least one asset to your portfolio.');
+    } else {
+      $(this).submit();
     }
   })
 });
