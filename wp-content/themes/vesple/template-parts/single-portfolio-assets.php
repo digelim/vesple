@@ -79,7 +79,7 @@
                 </div>
                 <#
                 $ = jQuery;
-                
+
                 $('#edit-shares-' + data.symbol.replace(/\./g, '\\\.')).on('click', function() {
                   var template = wp.template('selected-assets');
                   var quantity = $(this).parent().find('[name="stocks-amount"]').val();
@@ -88,6 +88,8 @@
                     symbol: data.symbol,
                     quantity: quantity,
                   }
+
+                  console.log(content);
 
                   $('#selected-assets').append(template(content));
 
