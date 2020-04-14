@@ -240,50 +240,20 @@ jQuery(document).ready(function($) {
 
     $('#selected-assets').append(template(content));
 
-    $('#edit-quantity-' + suggestion.symbol.replace(/\./g, '\\\.')).on('click', function(event) {
+    $('#save-quantity-' + suggestion.symbol.replace(/\./g, '\\\.')).on('click', function(event) {
       event.preventDefault();
 
       var quantity = $(this).parent().find('[name="stocks-amount"]').val();
 
-      $('#item-' + suggestion.symbol.replace(/\./g, '\\\.')).find('[name="stock-quantity[]"]').val(quantity);
-      $('#item-' + suggestion.symbol.replace(/\./g, '\\\.') + ' span b').text(quantity);
-
       if ($('#item-' + suggestion.symbol.replace(/\./g, '\\\.')).length <= 0) {
         appendAsset(suggestion.symbol, suggestion.name, quantity);
+      } else {
+        $('#item-' + suggestion.symbol.replace(/\./g, '\\\.')).find('[name="stock-quantity[]"]').val(quantity);
+        $('#item-' + suggestion.symbol.replace(/\./g, '\\\.') + ' span b').text(quantity);
       }
 
       $('.assets-popup-overlay').remove();
 
-    });
-
-    // $('#edit-quantity-' + symbol.replace(/\./g, '\\\.'))).on('click', function(event) {
-    //   event.preventDefault();
-    //
-    //   var quantity = $(this).parent().find('[name="stocks-amount"]').val();
-    //   var symbol = $(this).parent().find('[name="stocks-amount"]').attr('data-amount-symbol');
-    //
-    //   $('#item-' + symbol.replace(/\./g, '\\\.')).find('[name="stock-quantity[]"]').val(quantity);
-    //   $('#item-' + symbol.replace(/\./g, '\\\.') + ' span b').text(quantity);
-    //   $('.assets-popup-overlay').remove();
-    //
-    // });
-
-    // $('#save-stocks-amount, #close-assets-popup').on('click', function(event) {
-    //   event.preventDefault();
-    //
-    //   var quantity = parseInt( $('input[name="stocks-amount"').val());
-    //
-    //
-    //   $('.assets-popup-overlay').remove();
-    //
-    // });
-
-    $('#save-stocks-amount').on('click', function(event) {
-      event.preventDefault();
-      var quantity = $(this).parent().find('[name="stocks-amount"]').val();
-      var symbol = $(this).parent().find('[name="stocks-amount"]').attr('data-amount-symbol');
-      $('#item-' + symbol.replace(/\./g, '\\\.')).find('[name="stock-quantity[]"]').val(quantity);
-      $('#item-' + symbol.replace(/\./g, '\\\.') + ' span b').text(quantity);
     });
 
     $('#close-assets-popup').on('click', function(event) {
