@@ -240,16 +240,16 @@ jQuery(document).ready(function($) {
 
     $('#selected-assets').append(template(content));
 
-    $('#edit-quantity-' + symbol.replace(/\./g, '\\\.')).on('click', function(event) {
+    $('#edit-quantity-' + suggestion.symbol.replace(/\./g, '\\\.')).on('click', function(event) {
       event.preventDefault();
 
       var quantity = $(this).parent().find('[name="stocks-amount"]').val();
 
-      $('#item-' + symbol.replace(/\./g, '\\\.')).find('[name="stock-quantity[]"]').val(quantity);
-      $('#item-' + symbol.replace(/\./g, '\\\.') + ' span b').text(quantity);
+      $('#item-' + suggestion.symbol.replace(/\./g, '\\\.')).find('[name="stock-quantity[]"]').val(quantity);
+      $('#item-' + suggestion.symbol.replace(/\./g, '\\\.') + ' span b').text(quantity);
       $('.assets-popup-overlay').remove();
 
-      if ($('#item-' + symbol.replace(/\./g, '\\\.')).length <= 0) {
+      if ($('#item-' + suggestion.symbol.replace(/\./g, '\\\.')).length <= 0) {
         appendAsset(suggestion.symbol, suggestion.name, quantity);
       }
 
