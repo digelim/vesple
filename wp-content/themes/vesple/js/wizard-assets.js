@@ -126,7 +126,7 @@ jQuery(document).ready(function($) {
   var existingAssets = [];
 
   function appendAsset(symbol, name, quantity) {
-    $(document).on('click', '#edit-shares-' + suggestion.symbol.replace(/\./g, '\\\.'), function() {
+    $(document).on('click', '#edit-shares-' + symbol.replace(/\./g, '\\\.'), function() {
       var template = wp.template('selected-assets');
       var quantity = $(this).parent().find('[name="stocks-amount"]').val();
 
