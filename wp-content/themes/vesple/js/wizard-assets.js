@@ -247,12 +247,37 @@ jQuery(document).ready(function($) {
 
       if ($('#item-' + suggestion.symbol.replace(/\./g, '\\\.')).length <= 0) {
         appendAsset(suggestion.symbol, suggestion.name, quantity);
-      } else {
-        $('#item-' + suggestion.symbol.replace(/\./g, '\\\.')).find('[name="stock-quantity[]"]').val(quantity);
-        $('#item-' + suggestion.symbol.replace(/\./g, '\\\.') + ' span b').text(quantity);
       }
 
       $('.assets-popup-overlay').remove();
+
+      $('.add-shares-btn').on('click', function() {
+        var template = wp.template('selected-assets');
+        var quantity = $(this).parent().find('[name="stocks-amount"]').val();
+
+        var content = {
+          symbol: suggestion.symbol,
+          quantity: quantity,
+        }
+
+        $('#item-' + suggestion.symbol.replace(/\./g, '\\\.')).find('[name="stock-quantity[]"]').val(quantity);
+        $('#item-' + suggestion.symbol.replace(/\./g, '\\\.') + ' span b').text(quantity);
+
+
+        $('#selected-assets').append(template(content));
+
+        $('#save-quantity-' + suggestion.symbol.replace(/\./g, '\\\.')).on('click', function(event) {
+          event.preventDefault();
+
+          var quantity = $(this).parent().find('[name="stocks-amount"]').val();
+
+          $('#item-' + symbol.replace(/\./g, '\\\.')).find('[name="stock-quantity[]"]').val(quantity);
+          $('#item-' + symbol.replace(/\./g, '\\\.') + ' span b').text(quantity);
+          $('.assets-popup-overlay').remove();
+
+        });
+
+      });
 
     });
 
@@ -271,29 +296,29 @@ jQuery(document).ready(function($) {
 
 $ = jQuery;
 
-$(window).load(function() {
-  $('.add-shares-btn').on('click', function() {
-    var symbol = $(this).attr('data-symbol');
-    var quantity = $(this).find('[name="stock-quantity[]"]').val();
-    var template = wp.template('selected-assets');
-
-    var content = {
-      symbol: symbol,
-      quantity: quantity,
-    }
-
-    $('#selected-assets').append(template(content));
-
-    // $('#edit-quantity-' + symbol.replace(/\./g, '\\\.')).on('click', function(event) {
-    //   event.preventDefault();
-    //
-    //   var quantity = $(this).parent().find('[name="stocks-amount"]').val();
-    //
-    //   $('#item-' + symbol.replace(/\./g, '\\\.')).find('[name="stock-quantity[]"]').val(quantity);
-    //   $('#item-' + symbol.replace(/\./g, '\\\.') + ' span b').text(quantity);
-    //   $('.assets-popup-overlay').remove();
-    //
-    // });
-
-  });
-})
+// $(window).load(function() {
+//   $('.add-shares-btn').on('click', function() {
+//     var symbol = $(this).attr('data-symbol');
+//     var quantity = $(this).find('[name="stock-quantity[]"]').val();
+//     var template = wp.template('selected-assets');
+//
+//     var content = {
+//       symbol: symbol,
+//       quantity: quantity,
+//     }
+//
+//     $('#selected-assets').append(template(content));
+//
+//     // $('#edit-quantity-' + symbol.replace(/\./g, '\\\.')).on('click', function(event) {
+//     //   event.preventDefault();
+//     //
+//     //   var quantity = $(this).parent().find('[name="stocks-amount"]').val();
+//     //
+//     //   $('#item-' + symbol.replace(/\./g, '\\\.')).find('[name="stock-quantity[]"]').val(quantity);
+//     //   $('#item-' + symbol.replace(/\./g, '\\\.') + ' span b').text(quantity);
+//     //   $('.assets-popup-overlay').remove();
+//     //
+//     // });
+//
+//   });
+// })
