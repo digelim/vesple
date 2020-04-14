@@ -257,7 +257,7 @@
           <h1 class="m-b-30">Invest with 0% comission</h1>
           <p class="label-m2 m-b-70 dark">Vesple partnered with eToro, the leading social investing platform to offer you 0% comission on all stocks. Start investing today.</p>
           <div class="align-center">
-            <a href="http://partners.etoro.com/B11738_A88838_TClick_SVesple.aspx" target="_blank" class="btn btn-round btn-primary btn-medium">Create an account</a>
+            <a href="http://partners.etoro.com/B11738_A88838_TClick_SVesple.aspx" target="_blank"><img src="<?php echo bloginfo('stylesheet_directory'); ?>/img/etoro.png" alt="Create an account"></a>
           </div>
         </div>
         <svg height="10" width="10" xmlns="http://www.w3.org/2000/svg" version="1.1">
