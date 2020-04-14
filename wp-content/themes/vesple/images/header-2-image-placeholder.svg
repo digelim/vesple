@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="452.574" height="450.234" viewBox="0 0 452.574 450.234">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="base" d="M6,0H452.574a0,0,0,0,1,0,0V450.234a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V6A6,6,0,0,1,6,0Z" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="Screen" transform="translate(10)">
+    <g id="Grupo_21" data-name="Grupo 21">
+      <g id="Screen-2" data-name="Screen" transform="translate(-10)" clip-path="url(#clip-path)">
+        <rect id="Retângulo_1" data-name="Retângulo 1" width="453" height="450" transform="translate(0 0.5)" fill="#e5e5e5"/>
+      </g>
+    </g>
+  </g>
+</svg>

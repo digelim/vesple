@@ -1,0 +1,56 @@
+.responsive-sprites {
+  height: auto;
+  overflow: hidden;
+
+  & > img {
+    display: block;
+  }
+}
+
+// explanation:
+// width         = 100% * spritesheet width                       / image width
+// margin-top    = 100% * distance from top of sprite to image    / image width
+// margin-bottom = 100% * distance from bottom of sprite to image / image width
+// margin-left   = 100% * distance from left of sprite to image   / image width
+
+
+// Constants
+@total_width: 1098;
+@total_height: 925;
+
+img.icon-coruja {
+  width: 100% * @total_width / 300;
+  margin-top: 100% * -573 / 300;
+  margin-bottom: -100% * (@total_height - 573 - 300) / 300;
+  margin-left: -100% * 618 / 300;
+}
+img.icon-hero-img {
+  width: 100% * @total_width / 480;
+  margin-top: 100% * 0 / 480;
+  margin-bottom: -100% * (@total_height - 0 - 565) / 480;
+  margin-left: -100% * 0 / 480;
+}
+img.icon-logo-blue {
+  width: 100% * @total_width / 313;
+  margin-top: 100% * -431 / 313;
+  margin-bottom: -100% * (@total_height - 431 - 66) / 313;
+  margin-left: -100% * 488 / 313;
+}
+img.icon-logo-mobile {
+  width: 100% * @total_width / 66;
+  margin-top: 100% * -431 / 66;
+  margin-bottom: -100% * (@total_height - 431 - 64) / 66;
+  margin-left: -100% * 809 / 66;
+}
+img.icon-screen-1 {
+  width: 100% * @total_width / 610;
+  margin-top: 100% * 0 / 610;
+  margin-bottom: -100% * (@total_height - 0 - 423) / 610;
+  margin-left: -100% * 488 / 610;
+}
+img.icon-screen-2 {
+  width: 100% * @total_width / 610;
+  margin-top: 100% * -573 / 610;
+  margin-bottom: -100% * (@total_height - 573 - 352) / 610;
+  margin-left: -100% * 0 / 610;
+}

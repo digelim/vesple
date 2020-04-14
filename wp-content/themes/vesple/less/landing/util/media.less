@@ -1,0 +1,24 @@
+@screen-xs-max: 480px; // mobile
+@screen-sm-min: 481px; // tablet
+@screen-sm-max: 1024px; // tablet
+@screen-md-min: 1025px; //desktop
+@screen-md-max: 1440px; // desktop
+@screen-lg-min: 1441px; // desktop
+@menu-below: 0px; // menu
+@menu-above: 1px;
+
+@xs-and-up: ~"only screen"; // xs is the smallest size, so "xs and up" is basically "everything on a screen"
+@xs-only: ~"only screen and (max-width: @{screen-xs-max})";
+@sm-and-up: ~"only screen and (min-width: @{screen-sm-min})";
+@sm-only: ~"only screen and (min-width: @{screen-sm-min}) and (max-width: @{screen-sm-max})";
+@md-and-up: ~"only screen and (min-width: @{screen-md-min})";
+@md-only: ~"only screen and (min-width: @{screen-md-min}) and (max-width: @{screen-md-max})";
+@lg-and-up: ~"only screen and (min-width: @{screen-lg-min})";
+@lg-only: @lg-and-up;
+// Media query names like how we talk in the project (although "true" responsive webdesign shouldn't use these terms)
+@print: ~"print";
+@mobile: @xs-only; // Don't use this if you're using other sizes too, because Mobile First should be the default.
+@tablet: @sm-only;
+@desktop: @md-and-up;
+@menu-max: ~"(max-width: @{menu-below})";
+@menu-min: ~"(min-width: @{menu-above})";

@@ -1,0 +1,125 @@
+@import './utils.less';
+
+[class^="btn-"],
+[class*=" btn-"] {
+  // Style
+  transition: all 200ms ease;
+  color: white;
+  position: relative;
+  text-align: center;
+  text-decoration: none !important;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  &.btn-primary {
+    background-color: @color-primary;
+    .title-caps();
+    .type-bold();
+
+    &:hover { background-color: @color-secondary; }
+  }
+
+  &[class*="secondary"] {
+    background-color: @color-secondary;
+    .title-caps();
+    .type-bold();
+
+    &:hover { background-color: @color-secondary; }
+  }
+
+  &[class*="empty"] {
+    background-color: transparent;
+    .title-caps();
+    .type-bold();
+
+    &:hover { background-color: @color-secondary; }
+  }
+
+  &[class*="transparent"] {
+    border: 1px solid white;
+    .type-bold();
+    .title-caps();
+
+    &:hover{ border: 1px solid @color-secondary; }
+  }
+
+  &[class*="next-step"] {
+    background-color: @color-primary;
+    padding: 22px 37px 22px 64px;
+    border-bottom-left-radius: 32px;
+    border-top-left-radius: 32px;
+    display: block;
+    margin-bottom: -1px;
+    transition: none;
+    .font-m1;
+
+    &:hover { background-color: @color-secondary; }
+
+    .icon-next-tab {
+      margin-left: 10px;
+      position: relative;
+      top: 2px;
+    }
+  }
+
+  &[class*="tiny"] {
+    display: inline-block;
+    padding: 13px 20px;
+    border-radius: 28px;
+    .font-s1;
+  }
+
+  &[class*="small"] {
+    display: inline-block;
+    padding: 13px 24px;
+    border-radius: 28px;
+  }
+
+  &[class*="medium"] {
+    .font-s2;
+    display: inline-block;
+    padding: 17px 48px;
+    border-radius: 28px;
+  }
+
+  &[class*="large"] {
+    .font-s2;
+    display: block;
+    padding: 13px;
+    border-radius: 20px;
+    width: 100%;
+  }
+
+  &[disabled] { opacity: .5; }
+}
+
+.btns-group {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+
+  [class*="btn"],
+  [class^="btn"] {
+    flex: inherit;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+}
+
+input[type="submit"] {
+  border: none;
+}
+
+.tag {
+  padding: 10px 15px;
+  color: @color-primary;
+  border: 1px solid @color-primary;
+  border-radius: 30px;
+
+  &:hover {
+    background: @color-primary;
+    color: white;
+  }
+}

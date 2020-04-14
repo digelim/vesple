@@ -1,0 +1,119 @@
+@import './utils.less';
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent; // for some Androids
+}
+
+html, button, input, textarea, select {
+  outline: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  .type-regular;
+  color: #1B1B1B;
+  min-height: 100vh;
+}
+
+body, html {
+  overflow-x: hidden;
+}
+
+// TODO test and improve
+.btns-group {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+
+  [class*="btn-"] {
+    .ellipsized;
+    flex: 1;
+
+    & + [class*="btn-"] { margin-left: -1px; }
+  }
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  border: 1px solid @color-tertiary;
+}
+
+.no-borders {
+  border: none !important;
+}
+
+.shadow {
+  box-shadow: @shadow;
+}
+
+.faq-group {
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+
+  &:not(:last-child) {
+    margin-bottom: 60px;
+  }
+}
+
+.faq-plus {
+  box-sizing: border-box;
+  transition: transform 0.3s;
+  width: 20px;
+  height: 20px;
+  transform: rotate(180deg);
+  position: relative;
+}
+.faq-plus.active {
+  transform: rotate(0deg);
+}
+.faq-plus::before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 0px;
+  border-bottom: solid 2px #a1a1a1;
+  position: absolute;
+  bottom: 11px;
+  transform: rotate(90deg);
+  transition: width 0.3s;
+}
+.faq-plus.active::before {
+  content: '';
+  display: block;
+  width: 0px;
+  height: 0px;
+  border-bottom: solid 2px #a1a1a1;
+  position: absolute;
+  bottom: 11px;
+  transform: rotate(90deg);
+}
+.faq-plus::after {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 0px;
+  border-bottom: solid 2px #a1a1a1;
+  position: absolute;
+  bottom: 11px;
+}
+
+.faq-item {
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #d8d8d8;
+  }
+  cursor: pointer;
+}
+
+.label {
+  display: none;
+}
+
+.color-primary {
+  color: @color-primary !important;
+}

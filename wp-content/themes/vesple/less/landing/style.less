@@ -1,0 +1,406 @@
+/*
+Theme Name: Vesple
+Version: 1.0
+Description: Vesple theme.
+Author: Diogo Angelim
+Author URI: http://naubly.com
+*/
+
+@import "./reset.less";
+
+// Global namespace
+@import "./base.less";
+@import './button.less';
+@import './form.less';
+@import './layout.less';
+@import './link.less';
+@import './icons.less';
+
+
+// -- Custom styles goes here --
+body {
+  background-image: url('../../img/hero-bg.jpg');
+  background-repeat: repeat-y;
+}
+
+.blue-text {
+  color: @color-primary;
+}
+
+.header-content {
+  max-width: 994px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+nav {
+  position: fixed;
+  z-index: 10000;
+  width: 100%;
+}
+
+.main-menu {
+  height: 70px;
+
+  .menu-wrapper {
+    li {
+      &:not(:first-child) {
+        margin-left: 35px;
+      }
+    }
+  }
+}
+
+.form-box {
+  padding: 50px !important;
+}
+
+.menu-login {
+  a {
+    color: @color-primary;
+  }
+
+  .btn-primary {
+    margin-left: 35px;
+  }
+}
+
+.benefits-subtitle {
+  max-width: 694px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.how-works-container {
+  max-width: 890px;
+}
+
+.how-works-description {
+  max-width: 550px;
+}
+
+.screen-wrapper {
+  position: relative;
+
+  i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &:first-child {
+      left: -10%;
+    }
+
+    &:last-child {
+      right: -10%;
+    }
+  }
+
+  .screen {
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: @border-radius-big;
+    box-shadow: @shadow;
+  }
+}
+
+.pricing-col {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-box {
+    max-width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pricing-col .card {
+    padding: 40px 30px;
+    height: 100%;
+    box-shadow: @shadow;
+}
+
+.pricing-tag {
+    font-size: 45px;
+    font-weight: 500;
+}
+
+.pricing-none {
+    font-size: 38px;
+    font-weight: 500;
+}
+
+.faq-subtitle {
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logo {
+  max-width: 193px;
+
+  span {
+    border: 1px solid black;
+    padding: 5px;
+    margin-left: 5px;
+  }
+}
+
+.benefits-col img {
+    height: 120px;
+}
+
+.extra-paddings {
+    padding: 140px 0 240px 0;
+}
+
+footer {
+  background: @color-primary;
+
+  .row:first-child {
+    border-bottom: 1px solid white;
+
+    .responsive-sprites {
+      max-width: 193px;
+    }
+
+    a {
+      color: white;
+
+      &.btn-ghost {
+        border: 1px solid white;
+        color: white;
+        margin-left: 35px;
+      }
+    }
+  }
+}
+
+.benefits-col {
+    max-width: 370px;
+}
+
+.p-t-0 {
+  padding-top: 0;
+}
+
+@media (min-width: 601px) {
+  #billing_first_name_field, #billing_last_name_field {
+      width: ~"calc(50% - 20px)";
+      display: inline-block;
+  }
+
+  #billing_cpf_field, #billing_birthdate_field {
+      display: inline-block;
+      width: ~"calc(50% - 20px)";
+  }
+
+  #billing_number_field, #billing_neighborhood_field {
+    display: none;
+  }
+
+  #billing_country_field, #billing_postcode_field, #billing_city_field {
+      display: inline-block;
+      width: ~"calc(50% - 20px)";
+  }
+
+  #billing_cpf_field, #billing_first_name_field, #billing_postcode_field, #billing_city_field {
+    margin-right: 40px;
+  }
+
+  #billing_neighborhood_field {
+      display: inline-block;
+      width: ~"calc(50% - 20px)";
+  }
+
+  #billing_state_field, #billing_phone_field, #billing_address_1_field {
+    display: inline-block;
+    width: ~"calc(50% - 20px)";
+  }
+
+  #billing_city_field {
+      width: ~"calc(50% - 20px)";
+      display: inline-block;
+  }
+}
+
+#billing_sex_field {
+    display: none;
+}
+
+#billing_address_2_field {
+    display: none !important;
+}
+
+#billing_cellphone_field {
+    display: none;
+}
+
+tr.cart-subtotal.recurring-total {
+    display: none;
+}
+
+tr.recurring-totals {
+    display: none;
+}
+
+span.select2-selection.select2-selection--single {
+  border-radius: 0;
+  height: 58px;
+  border: 0;
+  border-bottom: 2px solid #b6c4cf;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  font-size: 28px;
+  padding-left: 6px;
+  line-height: 60px;
+  color: #757575 !important;
+  opacity: 1;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__placeholder {
+  color: #757575 !important;
+}
+.select2-container--open .select2-dropdown--above {
+  border-bottom: 1px solid #aaa;
+}
+
+.woocommerce-page {
+    background: white;
+}
+
+.wpmc-nav-buttons {
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  button {
+    background: @color-primary;
+    color: white;
+    .title-caps();
+    .type-medium();
+    border-radius: @border-radius-small;
+    padding: 17px 48px;
+    margin-left: 35px;
+  }
+}
+
+#payment button {
+  background: @color-primary;
+  color: white;
+  .title-caps();
+  .type-medium();
+  border-radius: @border-radius-small;
+  padding: 17px 48px;
+  margin-top: 35px;
+}
+
+table {
+  margin-top: 40px;
+
+  tr {
+    text-align: left;
+
+    &:not(.recurring-total) {
+        border-bottom: 1px solid;
+    }
+  }
+
+  .first-payment-date {
+      margin-top: 10px;
+  }
+
+  thead th {
+      font-weight: bold;
+  }
+
+  th, td {
+      padding: 20px 20px;
+  }
+}
+
+ul.woocommerce-error {
+    color: white;
+    font-size: 18px;
+    background: transparent;
+    margin-bottom: 20px;
+
+    li {
+      background: red;
+      padding: 10px;
+      margin-bottom: 15px;
+    }
+}
+
+.payment_box {
+    margin-top: 35px;
+}
+
+li.wc_payment_method {
+    margin-top: 35px;
+}
+
+.wc_payment_method img {
+    display: none;
+}
+
+payment_box p:first-child {
+    display: none;
+}
+
+#billing_phone_field {
+    display: none;
+}
+
+#billing_birthdate_field {
+    display: none;
+}
+
+table.woocommerce-checkout-review-order-table {
+    float: right;
+    display: block;
+    clear: both;
+    width: 50%;
+}
+
+tr.cart-subtotal {
+    display: none !important;
+}
+
+tr.order-total:not(:recurring-total) {
+  display: none !important;
+}
+
+#order_review_heading {
+    width: 50%;
+    float: right;
+}
+
+.blue-border {
+  border: 1px solid @color-primary
+}
+
+// #billing_email_field {
+//   display: none;
+// }
+
+@media (max-width: 768px) {
+  .benefits-col {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .pricing-col:not(:last-child) {
+    margin-bottom: 50px;
+  }
+}
+
+.txt-type > .txt {
+  border-right: 0.2rem solid black;
+}
+// responsive
+@import './responsive.less';

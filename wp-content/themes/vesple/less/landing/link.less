@@ -1,0 +1,24 @@
+@import './utils.less';
+
+a, button, input[type="submit"] {
+  transition: all 200ms ease-in;
+  text-decoration: none;
+
+  &:not(.text-white):not([class*="btn-"]):not(.btn) {
+    color: @color-links;
+
+    &:hover, &:active {
+      color: @color-primary;
+    }
+  }
+
+  .text-white {
+    color: @color-links-light;
+
+    &:hover, &:active {
+      color: @color-primary;
+    }
+  }
+
+  &:focus { outline:none; } //removes FF dotted outline
+}

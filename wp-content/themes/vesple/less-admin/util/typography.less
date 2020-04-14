@@ -1,0 +1,239 @@
+@import "../utils.less";
+
+.acf-block-preview {
+  body {
+    font-family: @text-font-family;
+  }
+
+  .type-light {
+    font-weight: 300;
+  }
+
+  .type-regular {
+    font-weight: 400;
+  }
+
+  .type-medium {
+    font-weight: 500;
+  }
+
+  .type-bold {
+    font-weight: 700;
+  }
+
+  .caps {
+    text-transform: uppercase;
+  }
+
+  // Default type layout
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    font-family: @heading-font-family, serif;
+  }
+
+  h1 {
+    line-height: 1.218;
+
+    &[class^="medium"],
+    &[class*=" medium"] {
+      font-size: 38px;
+    }
+
+    &[class^="large"],
+    &[class*=" large"] {
+      font-size: 62px;
+    }
+
+    &[class^="underline"],
+    &[class*=" underline"] {
+      padding-bottom: 47px;
+      position: relative;
+
+      &:after {
+        content: '';
+        width: 100px;
+        height: 2px;
+        background: @color-primary;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        position: absolute;
+      }
+
+      &[class^="align-left"],
+      &[class*=" align-left"] {
+        &:after {
+          content: '';
+          left: 0;
+          transform: none;
+        }
+      }
+    }
+  }
+
+  h2 {
+    font-size: 32px;
+    line-height: 1.54;
+  }
+
+  h3 {
+    font-size: 24px;
+    line-height: 1.218;
+  }
+
+  h4 {
+    font-size: 28px;
+    line-height: 1.63;
+  }
+
+  h5 {
+    font-size: 22px;
+    line-height: 1.63;
+  }
+
+  h6 {
+    font-size: 18px;
+    line-height: 1.63;
+  }
+
+  p {
+    margin-bottom: 0;
+
+    &:not(.subtitle) {
+      &[class^="large"],
+      &[class*=" large"] {
+        font-size: 20px;
+        line-height: 30px;
+        letter-spacing: 0;
+      }
+
+      &[class^="small"],
+      &[class*=" small"] {
+        font-size: 18px;
+        line-height: 27px;
+      }
+    }
+  }
+
+  b {
+    font-weight: bold;
+  }
+
+  em, i {
+    font-style: italic;
+  }
+
+  .subtitle {
+    color: inherit;
+    opacity: 0.65;
+    line-height: 1.63;
+
+    &[class^="large"],
+    &[class*=" large"] {
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    &[class^="small"],
+    &[class*=" small"] {
+      font-size: 18px;
+      line-height: 27px;
+    }
+  }
+
+  .btn {
+    line-height: 1;
+
+    [class^="large"],
+    [class*=" large"] {
+      font-size: 20px;
+    }
+
+    [class^="small"],
+    [class*=" small"] {
+      font-size: 13px;
+    }
+  }
+
+  .caption {
+    font-size: 12px;
+    line-height: 1;
+    color: lighten(black, 30%);
+  }
+
+  .overline {
+    .caps;
+    font-size: 12px;
+    line-height: 1;
+    color: lighten(black, 30%);
+  }
+
+  // text color
+  .for-each(@name in @colors-available) {
+      .color-@{name} {
+        @color: "color-@{name}";
+        color: @@color !important;
+      }
+  }
+
+  // text alignment
+  .align-right {
+    text-align: right;
+  }
+
+  .align-center {
+    text-align: center;
+  }
+
+  .align-left {
+    text-align: left;
+  }
+
+  .text-white {
+    color: white;
+  }
+
+  .text-black {
+    color: black;
+  }
+
+  .generate-font-size(50);
+
+  .generate-font-size(@n, @i: 1) when (@i =< @n) {
+    .font-@{i} {
+      font-size: ~"@{i}px";
+    }
+    .generate-font-size(@n, (@i + 1));
+  }
+
+  // Large fonts
+  .font-l2() {
+    .font-40;
+  }
+
+  .font-l1() {
+    .font-28;
+  }
+
+  // Medium fonts
+  .font-m2() {
+    .font-24;
+
+  }
+
+  .font-m1() {
+    .font-18;
+  }
+
+  // Small fonts
+  .font-s2() {
+    .font-14;
+  }
+
+  .font-s1() {
+    .font-12;
+  }
+
+}

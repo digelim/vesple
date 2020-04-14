@@ -1,0 +1,195 @@
+2020-03-22T12:07:12+00:00 CRITICAL syntax error, unexpected ':' in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/archive-product.php on line 39
+
+2020-03-22T12:07:35+00:00 CRITICAL syntax error, unexpected ':' in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/archive-product.php on line 40
+
+2020-03-22T12:07:52+00:00 CRITICAL syntax error, unexpected ':' in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/archive-product.php on line 40
+
+2020-03-22T13:00:19+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_Simple::get_period() in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/archive-product.php:28
+Stack trace:
+#0 /Applications/MAMP/htdocs/vesple/wp-includes/template-loader.php(98): include()
+#1 /Applications/MAMP/htdocs/vesple/wp-blog-header.php(19): require_once('/Applications/M...')
+#2 /Applications/MAMP/htdocs/vesple/index.php(17): require('/Applications/M...')
+#3 {main}
+  thrown in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/archive-product.php on line 28
+
+2020-03-22T13:00:44+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_Simple::get_period() in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/archive-product.php:28
+Stack trace:
+#0 /Applications/MAMP/htdocs/vesple/wp-includes/template-loader.php(98): include()
+#1 /Applications/MAMP/htdocs/vesple/wp-blog-header.php(19): require_once('/Applications/M...')
+#2 /Applications/MAMP/htdocs/vesple/index.php(17): require('/Applications/M...')
+#3 {main}
+  thrown in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/archive-product.php on line 28
+
+2020-03-22T13:02:15+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_Simple::get_billing_interval() in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/archive-product.php:28
+Stack trace:
+#0 /Applications/MAMP/htdocs/vesple/wp-includes/template-loader.php(98): include()
+#1 /Applications/MAMP/htdocs/vesple/wp-blog-header.php(19): require_once('/Applications/M...')
+#2 /Applications/MAMP/htdocs/vesple/index.php(17): require('/Applications/M...')
+#3 {main}
+  thrown in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/archive-product.php on line 28
+
+2020-03-22T13:02:59+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_Simple::get_billing_period() in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/archive-product.php:28
+Stack trace:
+#0 /Applications/MAMP/htdocs/vesple/wp-includes/template-loader.php(98): include()
+#1 /Applications/MAMP/htdocs/vesple/wp-blog-header.php(19): require_once('/Applications/M...')
+#2 /Applications/MAMP/htdocs/vesple/index.php(17): require('/Applications/M...')
+#3 {main}
+  thrown in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/archive-product.php on line 28
+
+2020-03-22T13:05:26+00:00 CRITICAL Uncaught Exception: Invalid order. in /Applications/MAMP/htdocs/vesple/wp-content/plugins/woocommerce/includes/data-stores/abstract-wc-order-data-store-cpt.php:101
+Stack trace:
+#0 /Applications/MAMP/htdocs/vesple/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(159): Abstract_WC_Order_Data_Store_CPT->read(Object(WC_Subscription))
+#1 /Applications/MAMP/htdocs/vesple/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-order.php(112): WC_Data_Store->read(Object(WC_Subscription))
+#2 /Applications/MAMP/htdocs/vesple/wp-content/plugins/woocommerce-subscriptions/includes/class-wc-subscription.php(117): WC_Abstract_Order->__construct(388137)
+#3 /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/archive-product.php(21): WC_Subscription->__construct(388137)
+#4 /Applications/MAMP/htdocs/vesple/wp-includes/template-loader.php(98): include('/Applications/M...')
+#5 /Applications/MAMP/htdocs/vesple/wp-blog-header.php(19): require_once('/Applications/M...')
+#6 /Applications/MAMP/htdocs/vesple/ in /Applications/MAMP/htdocs/vesple/wp-content/plugins/woocommerce/includes/data-stores/abstract-wc-order-data-store-cpt.php on line 101
+
+2020-03-22T13:15:27+00:00 CRITICAL Uncaught Exception: Invalid order. in /Applications/MAMP/htdocs/vesple/wp-content/plugins/woocommerce/includes/data-stores/abstract-wc-order-data-store-cpt.php:101
+Stack trace:
+#0 /Applications/MAMP/htdocs/vesple/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(159): Abstract_WC_Order_Data_Store_CPT->read(Object(WC_Subscription))
+#1 /Applications/MAMP/htdocs/vesple/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-order.php(112): WC_Data_Store->read(Object(WC_Subscription))
+#2 /Applications/MAMP/htdocs/vesple/wp-content/plugins/woocommerce-subscriptions/includes/class-wc-subscription.php(117): WC_Abstract_Order->__construct(388137)
+#3 /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/archive-product.php(21): WC_Subscription->__construct(388137)
+#4 /Applications/MAMP/htdocs/vesple/wp-includes/template-loader.php(98): include('/Applications/M...')
+#5 /Applications/MAMP/htdocs/vesple/wp-blog-header.php(19): require_once('/Applications/M...')
+#6 /Applications/MAMP/htdocs/vesple/ in /Applications/MAMP/htdocs/vesple/wp-content/plugins/woocommerce/includes/data-stores/abstract-wc-order-data-store-cpt.php on line 101
+
+2020-03-22T13:20:12+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function WC_Subscriptions_Product::get_period(), 0 passed in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/archive-product.php on line 30 and exactly 1 expected in /Applications/MAMP/htdocs/vesple/wp-content/plugins/woocommerce-subscriptions/includes/class-wc-subscriptions-product.php:464
+Stack trace:
+#0 /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/archive-product.php(30): WC_Subscriptions_Product::get_period()
+#1 /Applications/MAMP/htdocs/vesple/wp-includes/template-loader.php(98): include('/Applications/M...')
+#2 /Applications/MAMP/htdocs/vesple/wp-blog-header.php(19): require_once('/Applications/M...')
+#3 /Applications/MAMP/htdocs/vesple/index.php(17): require('/Applications/M...')
+#4 {main}
+  thrown in /Applications/MAMP/htdocs/vesple/wp-content/plugins/woocommerce-subscriptions/includes/class-wc-subscriptions-product.php on line 464
+
+2020-03-22T13:20:53+00:00 CRITICAL Uncaught Error: Call to undefined function get_period() in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/archive-product.php:30
+Stack trace:
+#0 /Applications/MAMP/htdocs/vesple/wp-includes/template-loader.php(98): include()
+#1 /Applications/MAMP/htdocs/vesple/wp-blog-header.php(19): require_once('/Applications/M...')
+#2 /Applications/MAMP/htdocs/vesple/index.php(17): require('/Applications/M...')
+#3 {main}
+  thrown in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/archive-product.php on line 30
+
+2020-03-22T13:24:00+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function WC_Subscriptions_Product::get_period(), 0 passed in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/archive-product.php on line 30 and exactly 1 expected in /Applications/MAMP/htdocs/vesple/wp-content/plugins/woocommerce-subscriptions/includes/class-wc-subscriptions-product.php:464
+Stack trace:
+#0 /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/archive-product.php(30): WC_Subscriptions_Product::get_period()
+#1 /Applications/MAMP/htdocs/vesple/wp-includes/template-loader.php(98): include('/Applications/M...')
+#2 /Applications/MAMP/htdocs/vesple/wp-blog-header.php(19): require_once('/Applications/M...')
+#3 /Applications/MAMP/htdocs/vesple/index.php(17): require('/Applications/M...')
+#4 {main}
+  thrown in /Applications/MAMP/htdocs/vesple/wp-content/plugins/woocommerce-subscriptions/includes/class-wc-subscriptions-product.php on line 464
+
+2020-03-22T13:35:13+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Subscriptions_Product::get_type() in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/archive-product.php:42
+Stack trace:
+#0 /Applications/MAMP/htdocs/vesple/wp-includes/template-loader.php(98): include()
+#1 /Applications/MAMP/htdocs/vesple/wp-blog-header.php(19): require_once('/Applications/M...')
+#2 /Applications/MAMP/htdocs/vesple/index.php(17): require('/Applications/M...')
+#3 {main}
+  thrown in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/archive-product.php on line 42
+
+2020-03-22T17:09:54+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function has_credits(), 0 passed in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/functions.php on line 14880 and at least 1 expected in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/functions.php:14832
+Stack trace:
+#0 /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/functions.php(14880): has_credits()
+#1 /Applications/MAMP/htdocs/vesple/wp-settings.php(497): include('/Applications/M...')
+#2 /Applications/MAMP/htdocs/vesple/wp-config.php(91): require_once('/Applications/M...')
+#3 /Applications/MAMP/htdocs/vesple/wp-load.php(37): require_once('/Applications/M...')
+#4 /Applications/MAMP/htdocs/vesple/wp-blog-header.php(13): require_once('/Applications/M...')
+#5 /Applications/MAMP/htdocs/vesple/index.php(17): require('/Applications/M...')
+#6 {main}
+  thrown in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/functions.php on line 14832
+
+2020-03-22T17:10:07+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function has_credits(), 0 passed in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/functions.php on line 14880 and at least 1 expected in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/functions.php:14832
+Stack trace:
+#0 /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/functions.php(14880): has_credits()
+#1 /Applications/MAMP/htdocs/vesple/wp-settings.php(497): include('/Applications/M...')
+#2 /Applications/MAMP/htdocs/vesple/wp-config.php(91): require_once('/Applications/M...')
+#3 /Applications/MAMP/htdocs/vesple/wp-load.php(37): require_once('/Applications/M...')
+#4 /Applications/MAMP/htdocs/vesple/wp-blog-header.php(13): require_once('/Applications/M...')
+#5 /Applications/MAMP/htdocs/vesple/index.php(17): require('/Applications/M...')
+#6 {main}
+  thrown in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/functions.php on line 14832
+
+2020-03-22T17:11:00+00:00 CRITICAL Uncaught Error: Function name must be a string in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/functions.php:14871
+Stack trace:
+#0 /Applications/MAMP/htdocs/vesple/wp-includes/class-wp-hook.php(288): validate_user_credits('')
+#1 /Applications/MAMP/htdocs/vesple/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /Applications/MAMP/htdocs/vesple/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /Applications/MAMP/htdocs/vesple/wp-includes/template-loader.php(13): do_action('template_redire...')
+#4 /Applications/MAMP/htdocs/vesple/wp-blog-header.php(19): require_once('/Applications/M...')
+#5 /Applications/MAMP/htdocs/vesple/index.php(17): require('/Applications/M...')
+#6 {main}
+  thrown in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/functions.php on line 14871
+
+2020-03-22T17:11:18+00:00 CRITICAL Uncaught Error: Call to undefined function has_availiabe_credits() in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/functions.php:14871
+Stack trace:
+#0 /Applications/MAMP/htdocs/vesple/wp-includes/class-wp-hook.php(288): validate_user_credits('')
+#1 /Applications/MAMP/htdocs/vesple/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /Applications/MAMP/htdocs/vesple/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /Applications/MAMP/htdocs/vesple/wp-includes/template-loader.php(13): do_action('template_redire...')
+#4 /Applications/MAMP/htdocs/vesple/wp-blog-header.php(19): require_once('/Applications/M...')
+#5 /Applications/MAMP/htdocs/vesple/index.php(17): require('/Applications/M...')
+#6 {main}
+  thrown in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/functions.php on line 14871
+
+2020-03-22T17:11:55+00:00 CRITICAL Uncaught Error: Call to undefined function has_availabe_credits() in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/functions.php:14871
+Stack trace:
+#0 /Applications/MAMP/htdocs/vesple/wp-includes/class-wp-hook.php(288): validate_user_credits('')
+#1 /Applications/MAMP/htdocs/vesple/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /Applications/MAMP/htdocs/vesple/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /Applications/MAMP/htdocs/vesple/wp-includes/template-loader.php(13): do_action('template_redire...')
+#4 /Applications/MAMP/htdocs/vesple/wp-blog-header.php(19): require_once('/Applications/M...')
+#5 /Applications/MAMP/htdocs/vesple/index.php(17): require('/Applications/M...')
+#6 {main}
+  thrown in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/functions.php on line 14871
+
+2020-03-22T17:12:36+00:00 CRITICAL Uncaught Error: Unsupported operand types in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/functions.php:14848
+Stack trace:
+#0 /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/functions.php(14871): has_available_credits(1)
+#1 /Applications/MAMP/htdocs/vesple/wp-includes/class-wp-hook.php(288): validate_user_credits('')
+#2 /Applications/MAMP/htdocs/vesple/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#3 /Applications/MAMP/htdocs/vesple/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#4 /Applications/MAMP/htdocs/vesple/wp-includes/template-loader.php(13): do_action('template_redire...')
+#5 /Applications/MAMP/htdocs/vesple/wp-blog-header.php(19): require_once('/Applications/M...')
+#6 /Applications/MAMP/htdocs/vesple/index.php(17): require('/Applications/M...')
+#7 {main}
+  thrown in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/functions.php on line 14848
+
+2020-03-22T17:14:06+00:00 CRITICAL Uncaught Error: Unsupported operand types in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/functions.php:14848
+Stack trace:
+#0 /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/functions.php(14871): has_available_credits(1)
+#1 /Applications/MAMP/htdocs/vesple/wp-includes/class-wp-hook.php(288): validate_user_credits('')
+#2 /Applications/MAMP/htdocs/vesple/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#3 /Applications/MAMP/htdocs/vesple/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#4 /Applications/MAMP/htdocs/vesple/wp-includes/template-loader.php(13): do_action('template_redire...')
+#5 /Applications/MAMP/htdocs/vesple/wp-blog-header.php(19): require_once('/Applications/M...')
+#6 /Applications/MAMP/htdocs/vesple/index.php(17): require('/Applications/M...')
+#7 {main}
+  thrown in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/functions.php on line 14848
+
+2020-03-22T17:14:36+00:00 CRITICAL Uncaught Error: Unsupported operand types in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/functions.php:14849
+Stack trace:
+#0 /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/functions.php(14872): has_available_credits(1)
+#1 /Applications/MAMP/htdocs/vesple/wp-includes/class-wp-hook.php(288): validate_user_credits('')
+#2 /Applications/MAMP/htdocs/vesple/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#3 /Applications/MAMP/htdocs/vesple/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#4 /Applications/MAMP/htdocs/vesple/wp-includes/template-loader.php(13): do_action('template_redire...')
+#5 /Applications/MAMP/htdocs/vesple/wp-blog-header.php(19): require_once('/Applications/M...')
+#6 /Applications/MAMP/htdocs/vesple/index.php(17): require('/Applications/M...')
+#7 {main}
+  thrown in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/functions.php on line 14849
+
+2020-03-22T17:14:49+00:00 CRITICAL Uncaught Error: Unsupported operand types in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/functions.php:14848
+Stack trace:
+#0 /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/functions.php(14871): has_available_credits(1)
+#1 /Applications/MAMP/htdocs/vesple/wp-includes/class-wp-hook.php(288): validate_user_credits('')
+#2 /Applications/MAMP/htdocs/vesple/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#3 /Applications/MAMP/htdocs/vesple/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#4 /Applications/MAMP/htdocs/vesple/wp-includes/template-loader.php(13): do_action('template_redire...')
+#5 /Applications/MAMP/htdocs/vesple/wp-blog-header.php(19): require_once('/Applications/M...')
+#6 /Applications/MAMP/htdocs/vesple/index.php(17): require('/Applications/M...')
+#7 {main}
+  thrown in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/functions.php on line 14848
+

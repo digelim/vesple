@@ -1,0 +1,6 @@
+2020-03-26T05:34:09+00:00 CRITICAL Allowed memory size of 134217728 bytes exhausted (tried to allocate 32768 bytes) in /Applications/MAMP/htdocs/vesple/wp-includes/wp-db.php on line 1995
+
+2020-03-26T05:34:35+00:00 CRITICAL Allowed memory size of 134217728 bytes exhausted (tried to allocate 32768 bytes) in /Applications/MAMP/htdocs/vesple/wp-includes/wp-db.php on line 1995
+
+2020-03-26T05:35:11+00:00 CRITICAL Allowed memory size of 134217728 bytes exhausted (tried to allocate 36864 bytes) in /Applications/MAMP/htdocs/vesple/wp-includes/wp-db.php on line 2030
+

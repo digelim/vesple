@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17.59" height="13.41" viewBox="0 0 17.59 13.41">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="17.59" height="13.41" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <path id="check" d="M5.59,10.58,1.42,6.41,0,7.82l5.59,5.59,12-12L16.18,0Z" transform="translate(3 5)"/>
+    </clipPath>
+  </defs>
+  <g id="icons_check" data-name="icons/check" clip-path="url(#clip-path)">
+    <path id="check-2" data-name="check" d="M5.59,10.58,1.42,6.41,0,7.82l5.59,5.59,12-12L16.18,0Z"/>
+    <g transform="translate(-3 -5)" clip-path="url(#clip-path-2)">
+      <g id="color_grey30" data-name="color/grey30" transform="translate(2 2)">
+        <rect id="color_grey30_background" data-name="color/grey30 background" width="20" height="20" fill="rgba(0,0,0,0)"/>
+        <rect id="color_red" data-name="color/red" width="20" height="20" fill="#00c960"/>
+      </g>
+    </g>
+  </g>
+</svg>

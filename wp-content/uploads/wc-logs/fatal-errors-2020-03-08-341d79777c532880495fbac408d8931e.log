@@ -1,0 +1,60 @@
+2020-03-08T10:15:57+00:00 CRITICAL Uncaught Error: Call to undefined method WP_Post::get_the_title() in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/functions.php:14847
+Stack trace:
+#0 /Applications/MAMP/htdocs/vesple/wp-includes/class-wp-hook.php(288): my_post_object_query(Array, Array, 162860)
+#1 /Applications/MAMP/htdocs/vesple/wp-includes/plugin.php(206): WP_Hook->apply_filters(Array, Array)
+#2 /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/inc/acf/includes/fields/class-acf-field-post_object.php(166): apply_filters('acf/fields/post...', Array, Array, 162860)
+#3 /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/inc/acf/includes/fields/class-acf-field-post_object.php(64): acf_field_post_object->get_ajax_query(Array)
+#4 /Applications/MAMP/htdocs/vesple/wp-includes/class-wp-hook.php(288): acf_field_post_object->ajax_query('')
+#5 /Applications/MAMP/htdocs/vesple/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters('', Array)
+#6 /Applications/MAMP/htdocs/vesple/wp-includes/plugin.php(478): WP_Hook->do_action in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/functions.php on line 14847
+
+2020-03-08T10:16:04+00:00 CRITICAL Uncaught Error: Call to undefined method WP_Post::get_the_title() in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/functions.php:14847
+Stack trace:
+#0 /Applications/MAMP/htdocs/vesple/wp-includes/class-wp-hook.php(288): my_post_object_query(Array, Array, 162860)
+#1 /Applications/MAMP/htdocs/vesple/wp-includes/plugin.php(206): WP_Hook->apply_filters(Array, Array)
+#2 /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/inc/acf/includes/fields/class-acf-field-post_object.php(166): apply_filters('acf/fields/post...', Array, Array, 162860)
+#3 /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/inc/acf/includes/fields/class-acf-field-post_object.php(64): acf_field_post_object->get_ajax_query(Array)
+#4 /Applications/MAMP/htdocs/vesple/wp-includes/class-wp-hook.php(288): acf_field_post_object->ajax_query('')
+#5 /Applications/MAMP/htdocs/vesple/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters('', Array)
+#6 /Applications/MAMP/htdocs/vesple/wp-includes/plugin.php(478): WP_Hook->do_action in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/functions.php on line 14847
+
+2020-03-08T11:13:52+00:00 CRITICAL syntax error, unexpected '?>' in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/functions.php on line 14843
+
+2020-03-08T11:13:52+00:00 CRITICAL syntax error, unexpected '?>' in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/functions.php on line 14843
+
+2020-03-08T11:13:56+00:00 CRITICAL syntax error, unexpected '?>' in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/functions.php on line 14843
+
+2020-03-08T11:15:41+00:00 CRITICAL syntax error, unexpected '?>' in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/functions.php on line 14840
+
+2020-03-08T11:15:51+00:00 CRITICAL syntax error, unexpected '?>' in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/functions.php on line 14840
+
+2020-03-08T11:16:08+00:00 CRITICAL syntax error, unexpected '?>' in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/functions.php on line 14840
+
+2020-03-08T11:17:51+00:00 CRITICAL syntax error, unexpected '?>' in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/functions.php on line 14847
+
+2020-03-08T11:17:53+00:00 CRITICAL syntax error, unexpected '?>' in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/functions.php on line 14847
+
+2020-03-08T11:36:05+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_Post as array in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/functions.php:14856
+Stack trace:
+#0 /Applications/MAMP/htdocs/vesple/wp-includes/class-wp-hook.php(288): wizard_portfolio('')
+#1 /Applications/MAMP/htdocs/vesple/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /Applications/MAMP/htdocs/vesple/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /Applications/MAMP/htdocs/vesple/wp-includes/general-template.php(2895): do_action('wp_footer')
+#4 /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/footer.php(12): wp_footer()
+#5 /Applications/MAMP/htdocs/vesple/wp-includes/template.php(722): require_once('/Applications/M...')
+#6 /Applications/MAMP/htdocs/vesple/wp-includes/template.php(671): load_template('/Applications/M...', true)
+#7 /Applications/MAMP/htdocs/vesple/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/single-portfolio in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/functions.php on line 14856
+
+2020-03-08T11:36:15+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_Post as array in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/functions.php:14856
+Stack trace:
+#0 /Applications/MAMP/htdocs/vesple/wp-includes/class-wp-hook.php(288): wizard_portfolio('')
+#1 /Applications/MAMP/htdocs/vesple/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /Applications/MAMP/htdocs/vesple/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /Applications/MAMP/htdocs/vesple/wp-includes/general-template.php(2895): do_action('wp_footer')
+#4 /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/footer.php(12): wp_footer()
+#5 /Applications/MAMP/htdocs/vesple/wp-includes/template.php(722): require_once('/Applications/M...')
+#6 /Applications/MAMP/htdocs/vesple/wp-includes/template.php(671): load_template('/Applications/M...', true)
+#7 /Applications/MAMP/htdocs/vesple/wp-includes/general-template.php(76): locate_template(Array, true)
+#8 /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/single-portfolio in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/functions.php on line 14856
+

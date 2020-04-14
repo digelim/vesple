@@ -1,0 +1,236 @@
+@import './utils.less';
+
+.acf-block-preview {
+  @width: 100%;
+
+  textarea {
+    resize: none;
+    paddingt-top: 15px;
+  }
+
+  // remove iphone styles
+  input, textarea {
+    border-radius: @border-radius-small;
+    border: 1px solid white;
+    -webkit-appearance: none;
+    font-family: @text-font-family;
+
+    &[class^="full-width"],
+    &[class*=" full-width"] {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  input[type="text"], input[type="email"], input[type="password"] {
+    height: 58px;
+    padding-left: 15px !important;
+
+    &:focus {
+      border: 1px solid @color-primary;
+    }
+  }
+
+  input[type="submit"], button {
+    padding: 20px 40px;
+    border-radius: 50px;
+    border: none;
+    transition: all 300ms ease;
+
+    &:hover {
+      background: darken(@color-primary, 20%) !important;
+    }
+  }
+
+  label {
+      text-transform: uppercase;
+      font-weight: bold;
+      color: lighten(black, 30%);
+      font-size: 12px;
+
+      input, textarea {
+        margin-top: 12px;
+        font-size: 16px;
+        line-height: 26px;
+      }
+  }
+
+  form {
+    br {
+        display: none;
+    }
+  }
+
+
+  //TODO - Document classes and html markup
+  .material-design {
+    .bar {
+      position: relative;
+      display: block;
+
+      &:before {
+        content: '' !important;
+        height: 2px;
+        width: 0;
+        bottom: 0px;
+        position: absolute;
+        background: @color-primary;
+        transition: all 300ms ease;
+        left: 0;
+      }
+
+      input[type="text"],
+      input[type="tel"],
+      input[type="email"],
+      input[type="password"],
+      textarea {
+        background: none;
+        color: @color-grey-1;
+        .font-l1();
+        width: @width;
+        padding: 10px 10px 10px 5px;
+        display: block;
+        border: none;
+        border-radius: 0;
+        border-bottom: 2px solid @color-grey-3;
+
+        &:focus {
+          outline: none;
+        }
+
+        &:focus ~ label,
+        &:valid ~ label {
+          .font-s1();
+          top: -20px;
+          color: @color-grey-1;
+        }
+
+
+        &:focus ~ .bar:before {
+          width: @width;
+        }
+      }
+
+      input[type="password"] {
+        letter-spacing: 0.3em;
+      }
+
+      label {
+        .font-l1;
+        line-height: 40px;
+        color: @color-grey-3;
+        position: absolute;
+        pointer-events: none;
+        left: 5px;
+        top: 10px;
+        transition: all 300ms ease;
+      }
+
+      &.with-icon {
+        input {
+          padding-left: 40px;
+
+          &::placeholder {
+            color: @color-grey-3;
+          }
+        }
+
+        label {
+          left: 40px;
+        }
+
+        [class^="icon-"], [class*=" icon-"] {
+          position: absolute;
+          top: 16px;
+          font-size: 26px;
+        }
+      }
+    }
+  }
+
+
+  // contact form 7 styles
+  .wpcf7-response-output {
+      border: none!important;
+      font-weight: 700;
+      line-height: 1.3;
+      font-size: 14px;
+      padding: 0 !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      color: black !important;
+  }
+
+  span.wpcf7-not-valid-tip {
+      position: relative;
+      top: -10px;
+      font-size: 14px;
+      text-align: left;
+  }
+
+  div.wpcf7 .ajax-loader {
+      display: none;
+  }
+
+  // form Switch
+  // TODO Document classes and html markup
+  .form-switch {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    text-transform: inherit;
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .form-switch i {
+    position: relative;
+    display: inline-block;
+    margin-right: 15px;
+    margin-left: 15px;
+    width: 46px;
+    height: 26px;
+    background-color: #e6e6e6;
+    border-radius: 23px;
+    vertical-align: text-bottom;
+    transition: all 0.3s linear;
+  }
+
+  .form-switch i::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 42px;
+    height: 22px;
+    background-color: #fff;
+    border-radius: 11px;
+    transform: translate3d(2px, 2px, 0) scale3d(1, 1, 1);
+    transition: all 0.25s linear;
+  }
+
+  .form-switch i::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 22px;
+    height: 22px;
+    background-color: #fff;
+    border-radius: 11px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.24);
+    transform: translate3d(2px, 2px, 0);
+    transition: all 0.2s ease-in-out;
+  }
+
+  .form-switch:active i::after {
+    width: 28px;
+    transform: translate3d(2px, 2px, 0);
+  }
+
+  .form-switch:active input:checked + i::after { transform: translate3d(16px, 2px, 0); }
+  .form-switch input { display: none; }
+  .form-switch input:checked + i { background-color: @color-primary; }
+  .form-switch input:checked + i::before { transform: translate3d(18px, 2px, 0) scale3d(0, 0, 0); }
+  .form-switch input:checked + i::after { transform: translate3d(22px, 2px, 0); }
+
+}

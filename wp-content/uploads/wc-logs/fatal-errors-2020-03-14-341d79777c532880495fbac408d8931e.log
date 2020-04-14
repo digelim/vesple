@@ -1,0 +1,16 @@
+2020-03-14T14:04:26+00:00 CRITICAL Uncaught Error: Class 'Walker_Nav_Menu_Dropdown' not found in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/index.php:26
+Stack trace:
+#0 /Applications/MAMP/htdocs/vesple/wp-includes/template-loader.php(98): include()
+#1 /Applications/MAMP/htdocs/vesple/wp-blog-header.php(19): require_once('/Applications/M...')
+#2 /Applications/MAMP/htdocs/vesple/index.php(17): require('/Applications/M...')
+#3 {main}
+  thrown in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/index.php on line 26
+
+2020-03-14T17:05:11+00:00 CRITICAL Uncaught Error: Class 'Walker_Nav_Menu_Dropdown' not found in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/index.php:26
+Stack trace:
+#0 /Applications/MAMP/htdocs/vesple/wp-includes/template-loader.php(98): include()
+#1 /Applications/MAMP/htdocs/vesple/wp-blog-header.php(19): require_once('/Applications/M...')
+#2 /Applications/MAMP/htdocs/vesple/index.php(17): require('/Applications/M...')
+#3 {main}
+  thrown in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/index.php on line 26
+

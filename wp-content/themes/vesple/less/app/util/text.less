@@ -1,0 +1,35 @@
+// Caps styling used in headers
+.title-caps() {
+  text-transform: uppercase;
+}
+
+// Adds an ellipses at the end of overflowing strings
+.ellipsized() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.force-wrap {
+  word-wrap: break-word;
+  word-break: break-all;
+ -ms-word-break: break-all;
+  word-break: break-word; // Non-standard for webkit
+  hyphens: auto;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.blue-text {
+  color: @color-primary;
+}

@@ -1,0 +1,110 @@
+@import './utils.less';
+
+.acf-block-preview {
+	.text-contrast(@background) when (lightness(@background) > 50) {
+		color: @color-dark;
+	}
+	.text-contrast(@background) when (lightness(@background) < 51) {
+		color: @color-light;
+	}
+
+	[class^="btn"],
+	[class*=" btn"] {
+	  .type-bold();
+	  border-radius: @border-radius-small;
+	  position: relative;
+	  text-align: center;
+	  text-decoration: none !important;
+	  vertical-align: middle;
+	  white-space: nowrap;
+	  display: inline-flex;
+	  align-items: center;
+	  text-transform: capitalize !important;
+
+	  i {
+	    margin-right: 8px;
+	  }
+
+	  &[class*="round"],
+	  &[class^="round"] {
+	    border-radius: 1000px;
+	  }
+
+	  &[class*="primary"],
+	  &[class^="primary"] {
+	    background-color: @color-primary;
+	    .text-contrast(@color-primary);
+	    box-shadow: @shadow;
+
+	    &:hover {
+	      background-color: darken(@color-primary, 10%);
+	    }
+	  }
+
+	  &[class*="secondary"],
+	  &[class^="secondary"] {
+	    background-color: @color-secondary;
+	    .text-contrast(@color-secondary);
+
+	    &:hover {
+	      background-color: darken(@color-secondary, 10%);
+	      box-shadow: @shadow;
+	      color: white;
+	    }
+	  }
+
+	  &[class*="white"],
+	  &[class^="white"] {
+	    color: @color-dark;
+	    background-color: white;
+
+	    &:hover{
+	      background-color: darken(white, 10%);
+	      box-shadow: @shadow;
+	    }
+	  }
+
+	  &[class*="ghost"],
+	  &[class^="ghost"] {
+	    border: 1px solid white;
+	    color: white;
+	    background: transparent;
+
+	    &:hover{
+	      background: @color-primary;
+	      .text-contrast(@color-primary);
+	      border: @color-primary;
+	      box-shadow: @shadow;
+	      border: 1px solid @color-primary;
+	    }
+	  }
+
+	  &[class*="small"],
+	  &[class^="small"] {
+	    padding: 10px 20px;
+	  }
+
+	  &[class*="large"],
+	  &[class^="large"] {
+	    padding: 16px 28px;
+	  }
+
+	  &[disabled] { opacity: .5; }
+	}
+
+	.btns-group {
+	  display: flex;
+	  flex-wrap: wrap;
+	  width: 100%;
+
+	  [class*="btn"],
+	  [class^="btn"] {
+	    flex: inherit;
+
+	    &:not(:last-child) {
+	      margin-right: 20px;
+	    }
+	  }
+	}
+
+}

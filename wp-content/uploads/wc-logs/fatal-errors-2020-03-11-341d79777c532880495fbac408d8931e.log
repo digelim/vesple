@@ -1,0 +1,37 @@
+2020-03-11T02:42:28+00:00 CRITICAL Uncaught Error: Call to undefined function format_number() in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/template-parts/dashboard-portfolio.php:173
+Stack trace:
+#0 /Applications/MAMP/htdocs/vesple/wp-includes/template.php(724): require()
+#1 /Applications/MAMP/htdocs/vesple/wp-includes/template.php(671): load_template('/Applications/M...', false)
+#2 /Applications/MAMP/htdocs/vesple/wp-includes/general-template.php(168): locate_template(Array, true, false)
+#3 /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/template-parts/single-portfolio-index.php(4): get_template_part('template-parts/...', 'portfolio')
+#4 /Applications/MAMP/htdocs/vesple/wp-includes/template.php(724): require('/Applications/M...')
+#5 /Applications/MAMP/htdocs/vesple/wp-includes/template.php(671): load_template('/Applications/M...', false)
+#6 /Applications/MAMP/htdocs/vesple/wp-includes/general-template.php(168): locate_template(Array, true, false)
+#7 /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/single-port in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/template-parts/dashboard-portfolio.php on line 173
+
+2020-03-11T05:09:56+00:00 CRITICAL Cannot redeclare create_portfolio() (previously declared in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/functions.php:14461) in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/functions.php on line 14667
+
+2020-03-11T16:14:33+00:00 CRITICAL Uncaught Less_Exception_Compiler: .caps is undefined in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/less/app/style.less in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/wp-less/vendor/oyejorge/less.php/lib/Less/Tree/Mixin/Call.php:148
+Stack trace:
+#0 /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/wp-less/vendor/oyejorge/less.php/lib/Less/Tree/Ruleset.php(147): Less_Tree_Mixin_Call->compile(Object(Less_Environment))
+#1 /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/wp-less/vendor/oyejorge/less.php/lib/Less/Tree/Ruleset.php(88): Less_Tree_Ruleset->EvalMixinCalls(Object(Less_Tree_Ruleset), Object(Less_Environment), 4)
+#2 /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/wp-less/vendor/oyejorge/less.php/lib/Less/Tree/Ruleset.php(94): Less_Tree_Ruleset->compile(Object(Less_Environment))
+#3 /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/wp-less/vendor/oyejorge/less.php/lib/Less/Parser.php(187): Less_Tree_Ruleset->compile(Object(Less_Environment))
+#4 in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/wp-less/vendor/oyejorge/less.php/lib/Less/Tree/Mixin/Call.php on line 148
+
+2020-03-11T16:14:39+00:00 CRITICAL Uncaught Less_Exception_Compiler: .caps is undefined in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/less/app/style.less in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/wp-less/vendor/oyejorge/less.php/lib/Less/Tree/Mixin/Call.php:148
+Stack trace:
+#0 /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/wp-less/vendor/oyejorge/less.php/lib/Less/Tree/Ruleset.php(147): Less_Tree_Mixin_Call->compile(Object(Less_Environment))
+#1 /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/wp-less/vendor/oyejorge/less.php/lib/Less/Tree/Ruleset.php(88): Less_Tree_Ruleset->EvalMixinCalls(Object(Less_Tree_Ruleset), Object(Less_Environment), 4)
+#2 /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/wp-less/vendor/oyejorge/less.php/lib/Less/Tree/Ruleset.php(94): Less_Tree_Ruleset->compile(Object(Less_Environment))
+#3 /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/wp-less/vendor/oyejorge/less.php/lib/Less/Parser.php(187): Less_Tree_Ruleset->compile(Object(Less_Environment))
+#4 in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/wp-less/vendor/oyejorge/less.php/lib/Less/Tree/Mixin/Call.php on line 148
+
+2020-03-11T16:14:43+00:00 CRITICAL Uncaught Less_Exception_Compiler: .caps is undefined in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/less/app/style.less in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/wp-less/vendor/oyejorge/less.php/lib/Less/Tree/Mixin/Call.php:148
+Stack trace:
+#0 /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/wp-less/vendor/oyejorge/less.php/lib/Less/Tree/Ruleset.php(147): Less_Tree_Mixin_Call->compile(Object(Less_Environment))
+#1 /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/wp-less/vendor/oyejorge/less.php/lib/Less/Tree/Ruleset.php(88): Less_Tree_Ruleset->EvalMixinCalls(Object(Less_Tree_Ruleset), Object(Less_Environment), 4)
+#2 /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/wp-less/vendor/oyejorge/less.php/lib/Less/Tree/Ruleset.php(94): Less_Tree_Ruleset->compile(Object(Less_Environment))
+#3 /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/wp-less/vendor/oyejorge/less.php/lib/Less/Parser.php(187): Less_Tree_Ruleset->compile(Object(Less_Environment))
+#4 in /Applications/MAMP/htdocs/vesple/wp-content/themes/vesple/wp-less/vendor/oyejorge/less.php/lib/Less/Tree/Mixin/Call.php on line 148
+

@@ -1,0 +1,12 @@
+@import './utils.less';
+
+a {
+  transition: all 200ms ease-in;
+  text-decoration: none;
+
+  &.dark-bg {
+    color: @color-ancillary;
+  }
+
+  &:focus { outline:none; } //removes FF dotted outline
+}

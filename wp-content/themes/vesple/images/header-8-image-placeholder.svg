@@ -1,0 +1,23 @@
+<svg id="Video" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="310" viewBox="0 0 512 310">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="66" height="66" fill="none"/>
+    </clipPath>
+    <filter id="base" x="223" y="123" width="66" height="66" filterUnits="userSpaceOnUse">
+      <feOffset dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feFlood flood-opacity="0.102"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="img">
+    <rect id="base-2" data-name="base" width="512" height="310" rx="6" fill="#d1d1d1"/>
+  </g>
+  <g id="button_white_play_static" data-name="button/white play/static" transform="translate(223 123)" clip-path="url(#clip-path)">
+    <g transform="matrix(1, 0, 0, 1, -223, -123)" filter="url(#base)">
+      <circle id="base-3" data-name="base" cx="27" cy="27" r="27" transform="translate(229 128)" fill="#fff"/>
+    </g>
+    <path id="Shape" d="M0,0V18L13,9Z" transform="translate(28 23)" fill="#1b1b1b"/>
+  </g>
+</svg>
