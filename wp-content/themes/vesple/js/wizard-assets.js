@@ -260,10 +260,6 @@ jQuery(document).ready(function($) {
           quantity: quantity,
         }
 
-        $('#item-' + suggestion.symbol.replace(/\./g, '\\\.')).find('[name="stock-quantity[]"]').val(quantity);
-        $('#item-' + suggestion.symbol.replace(/\./g, '\\\.') + ' span b').text(quantity);
-
-
         $('#selected-assets').append(template(content));
 
         $('#save-quantity-' + suggestion.symbol.replace(/\./g, '\\\.')).on('click', function(event) {
@@ -271,8 +267,8 @@ jQuery(document).ready(function($) {
 
           var quantity = $(this).parent().find('[name="stocks-amount"]').val();
 
-          $('#item-' + symbol.replace(/\./g, '\\\.')).find('[name="stock-quantity[]"]').val(quantity);
-          $('#item-' + symbol.replace(/\./g, '\\\.') + ' span b').text(quantity);
+          $('#item-' + suggestion.symbol.replace(/\./g, '\\\.')).find('[name="stock-quantity[]"]').val(quantity);
+          $('#item-' + suggestion.symbol.replace(/\./g, '\\\.') + ' span b').text(quantity);
           $('.assets-popup-overlay').remove();
 
         });
