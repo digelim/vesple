@@ -306,17 +306,19 @@ body {
 }
 
 .assets-popup-overlay {
-    width: 100%;
-    top: 0;
-    background: #00000091;
-    z-index: 10000;
-    overflow: scroll;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    padding-top: 50px;
-    padding-bottom: 50px;
+  width: 100%;
+  top: 0;
+  background: #00000091;
+  z-index: 10000;
+  overflow-y: scroll;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  padding-top: 50px;
+  min-height: 100vh;
+  padding-bottom: 50px;
+  height: 600px;
 }
 
 .popup-input-group {
