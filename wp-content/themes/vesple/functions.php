@@ -14582,7 +14582,9 @@ function update_prices( $offset ) {
 
 		$new_json = json_encode( $returns );
 
-		update_field( 'returns', $new_json, $my_post->ID );
+		if ( sizeof( $returns ) > 0 ) {
+			update_field( 'returns', $new_json, $my_post->ID );
+		}
 	}
 }
 
