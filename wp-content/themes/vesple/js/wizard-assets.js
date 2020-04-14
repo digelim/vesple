@@ -277,6 +277,7 @@ $(window).load(function() {
       event.preventDefault();
       $('.assets-popup-overlay').remove();
     });
+    
 
     $('#edit-quantity-' + symbol.replace(/\./g, '\\\.')).on('click', function(event) {
       event.preventDefault();
