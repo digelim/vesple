@@ -14543,13 +14543,15 @@ function update_prices( $offset ) {
 			'post_status' => 'publish',
 			'numberposts' => 2500,
 			'offset' => intval( $offset ),
+			'order' => 'ASC',
+	    'orderby' => 'date',
 		)
 	);
 
 	foreach ( $my_posts as $my_post ) {
 		// Fetch the data
 		$symbol = $my_post->post_title;
-		$json_url = 'https://eodhistoricaldata.com/api/eod/' . $symbol . '?from=' . date("Y-m-d", strtotime("-8 years")) . '&&api_token=5e8bf2d5ef8800.10311711&fmt=json';
+		$json_url = 'https://eodhistoricaldata.com/api/eod/' . $symbol . '?from=' . date("Y-m-d", strtotime("-8 years")) . '&api_token=5e8bf2d5ef8800.10311711&fmt=json';
 		$json = file_get_contents($json_url);
 		$data = json_decode($json, true);
 
