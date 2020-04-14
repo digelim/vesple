@@ -28,7 +28,7 @@
     <div class="container">
         <div class="group material-design with-icon assets-search">
           <input class="form-control typeahead" autocomplete="off" data-limit="10" spellcheck="off" name="assets"
-           data-source="assets" data-template="assets_suggestion" data-value-key="name" type="text" placeholder="Add your favorite stocks here" data-select="select"/>
+           data-source="assets" data-template="assets_suggestion" data-value-key="name" type="text" placeholder="Add your favorite stocks, crypto or currencies" data-select="select"/>
           <span class="icon-input-search"></span>
           <span class="bar"></span>
           <!-- <div class="tags-list">
