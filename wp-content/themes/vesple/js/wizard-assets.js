@@ -254,7 +254,6 @@ jQuery(document).ready(function($) {
       $(document).on('click', '#edit-shares-' + suggestion.symbol.replace(/\./g, '\\\.'), function() {
         var template = wp.template('selected-assets');
         var quantity = $(this).parent().find('[name="stocks-amount"]').val();
-        var symbol =
 
         var content = {
           symbol: suggestion.symbol,
@@ -265,7 +264,7 @@ jQuery(document).ready(function($) {
 
         $('#selected-assets').append(template(content));
 
-        $('#save-quantity-' + data.symbol.replace(/\./g, '\\\.')).on('click', function(event) {
+        $('#save-quantity-' + suggestion.symbol.replace(/\./g, '\\\.')).on('click', function(event) {
           event.preventDefault();
 
           var quantity = $(this).parent().find('[name="stocks-amount"]').val();
