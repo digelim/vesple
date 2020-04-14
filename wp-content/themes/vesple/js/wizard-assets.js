@@ -291,12 +291,9 @@ jQuery(document).ready(function($) {
   }
 
   $('form').on('submit', function(event) {
-    event.preventDefault();
-
     if ($('[name="symbols[]"]').length === 0) {
+      event.preventDefault();
       alert('Please, add at least one asset to your portfolio.');
-    } else {
-      $('form').submit();
     }
   })
 });
