@@ -165,7 +165,7 @@ jQuery(document).ready(function($) {
             };
           }).slice(-365);
 
-          data = simplify(data, 3.2, true);
+          data = simplify(data, 2.8, true);
 
           var assetContent = {
             color: apiData.returns[dates[dates.length - 1]].change >= 0 ? '#37c171' : '#ed0123',
@@ -184,9 +184,9 @@ jQuery(document).ready(function($) {
 
           $('.assets-list ul').append(template(assetContent));
 
-          $('[data-remove="item-' + symbol + '"]').on('click', function(e) {
+          $(document).on('click', '[data-remove="item-' + symbol.replace(/\./g, '\\\.') + '"]', function(e) {
             e.preventDefault();
-            $('#item-' + symbol).remove();
+            $('#item-' + symbol.replace(/\./g, '\\\.')).remove();
           });
 
           var element = document.querySelector('#a-' + symbol.replace(/\./g, '\\\.'));
@@ -208,7 +208,7 @@ jQuery(document).ready(function($) {
 
             graph.render();
           }
-          
+
           existingAssets.push(symbol);
 
         } else {

@@ -67,7 +67,7 @@
                     </div>
                     <div class="right">
                       <span class="label-m1 dark">${{{data.close}}}</span>
-                      <span class="label-s1" style="color: {{{data.color}}};">{{{data.signal}}}{{{data.change}}}(${{{data.cents}}})</span>
+                      <span class="label-s1" style="color: {{{data.color}}};">{{{data.signal}}}{{{data.change}}}% (${{{data.cents}}})</span>
                     </div>
                   </div>
                 </div>
