@@ -240,15 +240,30 @@ jQuery(document).ready(function($) {
 
     $('#selected-assets').append(template(content));
 
-    $('#save-stocks-amount, #close-assets-popup').on('click', function(event) {
+    $('#edit-quantity-' + symbol.replace(/\./g, '\\\.')).on('click', function(event) {
       event.preventDefault();
 
-      var quantity = parseInt( $('input[name="stocks-amount"').val());
+      var quantity = $(this).parent().find('[name="stocks-amount"]').val();
 
-      appendAsset(suggestion.symbol, suggestion.name, quantity);
+      $('#item-' + symbol.replace(/\./g, '\\\.')).find('[name="stock-quantity[]"]').val(quantity);
+      $('#item-' + symbol.replace(/\./g, '\\\.') + ' span b').text(quantity);
       $('.assets-popup-overlay').remove();
 
+      if ($('#item-' + symbol.replace(/\./g, '\\\.')).length <= 0) {
+        appendAsset(suggestion.symbol, suggestion.name, quantity);
+      }
+
     });
+
+    // $('#save-stocks-amount, #close-assets-popup').on('click', function(event) {
+    //   event.preventDefault();
+    //
+    //   var quantity = parseInt( $('input[name="stocks-amount"').val());
+    //
+    //
+    //   $('.assets-popup-overlay').remove();
+    //
+    // });
 
   });
 
@@ -273,21 +288,21 @@ $(window).load(function() {
 
     $('#selected-assets').append(template(content));
 
-    $('#close-assets-popup').on('click', function(event) {
-      event.preventDefault();
-    });
+    // $('#edit-quantity-' + symbol.replace(/\./g, '\\\.')).on('click', function(event) {
+    //   event.preventDefault();
+    //
+    //   var quantity = $(this).parent().find('[name="stocks-amount"]').val();
+    //
+    //   $('#item-' + symbol.replace(/\./g, '\\\.')).find('[name="stock-quantity[]"]').val(quantity);
+    //   $('#item-' + symbol.replace(/\./g, '\\\.') + ' span b').text(quantity);
+    //   $('.assets-popup-overlay').remove();
+    //
+    // });
 
-    $('#save-stocks-amount').on('click', function(event) {
-      event.preventDefault();
+  });
 
-      var quantity = $(this).parent().find('[name="stocks-amount"]').val();
-      var symbol = $(this).parent().find('[name="stocks-amount"]').attr('data-amount-symbol');
-
-      $('#item-' + symbol.replace(/\./g, '\\\.')).find('[name="stock-quantity[]"]').val(quantity);
-      $('#item-' + symbol.replace(/\./g, '\\\.') + ' span b').text(quantity);
-      $('.assets-popup-overlay').remove();
-
-    });
-
+  $('#close-assets-popup').on('click', function(event) {
+    event.preventDefault();
+    $('.assets-popup-overlay').remove();
   });
 })
