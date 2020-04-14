@@ -94,20 +94,20 @@
        </defs>
      </svg>
      <div id="selected-assets">
-       <script type="text/html" id="tmpl-selected-assets">
-        <div class="assets-popup-overlay">
-          <div class="assets-popup">
-            <span class="icon-delete" id="close-assets-popup"></span>
-            <h1 class="label-m1">How many shares do you own?</h1>
-            <div class="group material-design popup-input-group">
-              <input required="required" type="tel" name="stocks-amount" data-amount-symbol="{{{data.symbol}}}" value="{{data.quantity}}">
-              <span class="bar"></span>
-              <label>{{data.symbol}}</label>
-            </div>
-            <a href="#" class="btn btn-primary btn-small block" id="save-stocks-amount">Save</a>
-          </div>
-        </div>
-       </script>
      </div>
   </div>
 </form>
+<script type="text/html" id="tmpl-selected-assets">
+ <div class="assets-popup-overlay">
+   <div class="assets-popup">
+     <span class="icon-delete" id="close-assets-popup"></span>
+     <h1 class="label-m1">How many shares do you own?</h1>
+     <div class="group material-design popup-input-group">
+       <input required="required" type="tel" name="stocks-amount" data-amount-symbol="{{{data.symbol}}}" value="{{data.quantity}}">
+       <span class="bar"></span>
+       <label>{{data.symbol}}</label>
+     </div>
+     <a href="#" class="btn btn-primary btn-small block" id="save-stocks-amount">Save</a>
+   </div>
+ </div>
+</script>
