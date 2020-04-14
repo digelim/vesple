@@ -276,11 +276,11 @@ $(window).load(function() {
     $('#save-stocks-amount, #close-assets-popup').on('click', function(event) {
       event.preventDefault();
 
-      var quantity = $(this).parent().find('[name="stocks-amount"]').val();
-      var symbol = $(this).parent().find('[name="stocks-amount"]').attr('data-amount-symbol');
+      var qty = $(this).parent().find('[name="stocks-amount"]').val();
+      var sb = $(this).parent().find('[name="stocks-amount"]').attr('data-amount-symbol');
 
-      $('#item-' + symbol.replace(/\./g, '\\\.')).find('[name="stock-quantity[]"]').val(quantity);
-      $('#item-' + symbol.replace(/\./g, '\\\.') + ' span b').text(quantity);
+      $('#item-' + sb.replace(/\./g, '\\\.')).find('[name="stock-quantity[]"]').val(qty);
+      $('#item-' + sb.replace(/\./g, '\\\.') + ' span b').text(qty);
       $('.assets-popup-overlay').remove();
 
     });
