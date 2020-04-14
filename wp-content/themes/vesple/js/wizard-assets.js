@@ -273,11 +273,15 @@ $(window).load(function() {
 
     $('#selected-assets').append(template(content));
 
-    $('#save-stocks-amount, #close-assets-popup').on('click', function(event) {
+    $('#close-assets-popup').on('click', function(event) {
+      event.preventDefault();
+      $('.assets-popup-overlay').remove();
+    });
+
+    $('#edit-quantity-' + symbol.replace(/\./g, '\\\.')).on('click', function(event) {
       event.preventDefault();
 
       var quantity = $(this).parent().find('[name="stocks-amount"]').val();
-      var symbol = $(this).parent().find('[name="stocks-amount"]').attr('data-amount-symbol');
 
       $('#item-' + symbol.replace(/\./g, '\\\.')).find('[name="stock-quantity[]"]').val(quantity);
       $('#item-' + symbol.replace(/\./g, '\\\.') + ' span b').text(quantity);
