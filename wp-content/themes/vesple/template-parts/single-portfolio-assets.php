@@ -107,7 +107,7 @@
        <span class="bar"></span>
        <label>{{data.symbol}}</label>
      </div>
-     <a href="#" class="btn btn-primary btn-small block" id="save-stocks-amount" id="save-quantity-{{data.symbol}}">Save</a>
+     <a href="#" class="btn btn-primary btn-small block" id="save-quantity-{{data.symbol}}">Save</a>
    </div>
  </div>
 </script>
