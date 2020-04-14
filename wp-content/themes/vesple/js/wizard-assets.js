@@ -251,7 +251,7 @@ jQuery(document).ready(function($) {
 
       $('.assets-popup-overlay').remove();
 
-      $('.add-shares-btn').on('click', function() {
+      $('#edit-shares-' + suggestion.symbol.replace(/\./g, '\\\.')).on('click', function() {
         var template = wp.template('selected-assets');
         var quantity = $(this).parent().find('[name="stocks-amount"]').val();
 

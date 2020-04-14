@@ -71,7 +71,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="add-shares-btn" data-symbol="{{{data.symbol}}}" data-asset-id="{{{data.symbol}}}">
+                <div class="add-shares-btn" data-symbol="{{{data.symbol}}}" data-asset-id="{{{data.symbol}}}" id="edit-shares-{{data.symbol}}">
                   <span class="label-m1 dark"><b>{{data.quantity}}</b></span>
                   <input type="hidden" name="stock-quantity[]" value="{{data.quantity}}">
                   <span class="icon-edit m-l-10" style="margin-right: -15px"></span>
