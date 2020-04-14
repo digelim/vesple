@@ -250,11 +250,8 @@ jQuery(document).ready(function($) {
 
       if ($('#item-' + suggestion.symbol.replace(/\./g, '\\\.')).length <= 0) {
         appendAsset(suggestion.symbol, suggestion.name, quantity);
-      } else {
-        $('#item-' + suggestion.symbol.replace(/\./g, '\\\.')).find('[name="stock-quantity[]"]').val(quantity);
-        $('#item-' + suggestion.symbol.replace(/\./g, '\\\.') + ' span b').text(quantity);
       }
-      
+
       $('.assets-popup-overlay').remove();
 
     });
@@ -280,6 +277,19 @@ jQuery(document).ready(function($) {
     //   $('.assets-popup-overlay').remove();
     //
     // });
+
+    $('#save-stocks-amount').on('click', function(event) {
+      event.preventDefault();
+      var quantity = $(this).parent().find('[name="stocks-amount"]').val();
+      var symbol = $(this).parent().find('[name="stocks-amount"]').attr('data-amount-symbol');
+      $('#item-' + symbol.replace(/\./g, '\\\.')).find('[name="stock-quantity[]"]').val(quantity);
+      $('#item-' + symbol.replace(/\./g, '\\\.') + ' span b').text(quantity);
+    });
+
+    $('#close-assets-popup').on('click', function(event) {
+      event.preventDefault();
+      $('.assets-popup-overlay').remove();
+    });
 
   });
 
@@ -315,10 +325,5 @@ $(window).load(function() {
     //
     // });
 
-  });
-
-  $('#close-assets-popup').on('click', function(event) {
-    event.preventDefault();
-    $('.assets-popup-overlay').remove();
   });
 })
