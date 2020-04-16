@@ -294,15 +294,13 @@ body {
 }
 
 .assets-popup {
-    position: fixed;
+    position: absolute;
     background: white;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin-bottom: 50px;
     padding: 30px;
     border-radius: 8px;
-    border: 1px solid @color-grey-5;
-    min-width: 320px
+    border: 1px solid #e1e7eb;
+    height: fit-content;
 }
 
 .assets-popup-overlay {
@@ -1537,13 +1535,6 @@ a.remove:hover span:before {
 @media (min-width: 481px) and (max-width: 991px){
   .performance-items li {
     width: 50%;
-  }
-}
-
-@media (max-width: 480px) {
-  .assets-popup {
-    top: 30px;
-    transform: translate(-50%, 0);
   }
 }
 
