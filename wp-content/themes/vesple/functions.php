@@ -13462,14 +13462,17 @@ function add_assets_to_portfolio() {
 				  the_row();
 
 				  if ( get_sub_field( 'symbol' ) === $symbol ) {
-				    continue;
+						$row = get_row_index();
+
+						$value = array(
+							'symbol' => $symbol,
+							'add_date' => $add_date,
+							'quantity' => $quantity[$key],
+						);
+
+						update_row( 'assets', $row, $value, $post_id );
 				  }
 
-					$row = array(
-						'symbol' => $symbol,
-						'add_date' => $add_date,
-						'quantity' => $quantity[$key],
-					);
 				}
 			}
 		}
