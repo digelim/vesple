@@ -13468,7 +13468,7 @@ function add_assets_to_portfolio() {
 					 $add_date = $add_date->format('Y-m-d H:i:s');
 
 					$value = array(
-						'symbol' => $symbol,
+						'symbol' => $symbols_to_add[$key],
 						'add_date' => $add_date,
 						'quantity' => $quantity[$key],
 					 );
