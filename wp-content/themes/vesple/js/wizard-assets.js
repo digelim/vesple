@@ -140,7 +140,7 @@ jQuery(document).ready(function($) {
       $('#save-quantity-' + symbol.replace(/\./g, '\\\.')).on('click', function(event) {
         event.preventDefault();
 
-        var quantity = $(this).parent().find('[name="stocks-amount"]').val();
+        var quantity = Number($(this).parent().find('[name="stocks-amount"]').val());
 
         $('#item-' + symbol.replace(/\./g, '\\\.')).find('[name="stock-quantity[]"]').val(quantity);
         $('#item-' + symbol.replace(/\./g, '\\\.') + ' span b').text(quantity);
@@ -271,7 +271,7 @@ jQuery(document).ready(function($) {
     $('#save-quantity-' + suggestion.symbol.replace(/\./g, '\\\.')).on('click', function(event) {
       event.preventDefault();
 
-      var quantity = $(this).parent().find('[name="stocks-amount"]').val();
+      var quantity = Number($(this).parent().find('[name="stocks-amount"]').val());
 
       if ($('#item-' + suggestion.symbol.replace(/\./g, '\\\.')).length <= 0) {
         appendAsset(suggestion.symbol, suggestion.name, quantity);
@@ -295,6 +295,15 @@ jQuery(document).ready(function($) {
   $(document).on('click', '#close-assets-popup',function(event) {
     event.preventDefault();
     $('.assets-popup-overlay').remove();
+  });
+
+  $(document).on('change', 'input[name="stocks-amount"]', function (event) {
+    this.value = this.value.replace(/[^0-9]+/g, '');
+    if (this.value < 1) this.value = 0;
+  });
+
+  $(document).on('keypress', 'input[name="stocks-amount"]', function (event) {
+      return (((event.which > 47) && (event.which < 58)) || (event.which == 13));
   });
 });
 
