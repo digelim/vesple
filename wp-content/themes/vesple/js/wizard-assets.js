@@ -279,12 +279,6 @@ jQuery(document).ready(function($) {
 
       $('.assets-popup-overlay').remove();
     });
-
-    $(document).on('click', '#close-assets-popup',function(event) {
-      event.preventDefault();
-      $('.assets-popup-overlay').remove();
-    });
-
   });
 
   for (var i = 0; i < assetsToLoad.length; i++) {
@@ -296,7 +290,12 @@ jQuery(document).ready(function($) {
       event.preventDefault();
       alert('Please, add at least one asset to your portfolio.');
     }
-  })
+  });
+
+  $(document).on('click', '#close-assets-popup',function(event) {
+    event.preventDefault();
+    $('.assets-popup-overlay').remove();
+  });
 });
 
 
