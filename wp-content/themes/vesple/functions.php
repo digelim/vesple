@@ -13458,23 +13458,18 @@ function add_assets_to_portfolio() {
 
 				add_row( 'assets', $row, $post_id );
 			} else {
-				if ( have_rows( 'assets', $post_id ) ) {
-					while( have_rows( 'assets', $post_id ) ) {
-					the_row();
+				while ( have_rows( 'assets', $post_id ) ) {
+				  the_row();
 
-					$row = get_row_index();
+				  if ( get_sub_field( 'symbol' ) === $symbol ) {
+				    continue;
+				  }
 
-					$add_date = new DateTime();
-					 $add_date = $add_date->format('Y-m-d H:i:s');
-
-					$value = array(
-						'symbol' => $symbols_to_add[$key],
+					$row = array(
+						'symbol' => $symbol,
 						'add_date' => $add_date,
 						'quantity' => $quantity[$key],
-					 );
-
-	 				update_row( 'assets', $row, $value, $post_id );
-					}
+					);
 				}
 			}
 		}
