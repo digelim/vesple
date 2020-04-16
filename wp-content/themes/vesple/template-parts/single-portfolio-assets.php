@@ -93,8 +93,8 @@
          </pattern>
        </defs>
      </svg>
-     <div id="selected-assets">
-     </div>
+  </div>
+  <div id="selected-assets">
   </div>
 </form>
 <script type="text/html" id="tmpl-selected-assets">

@@ -280,7 +280,7 @@ jQuery(document).ready(function($) {
       $('.assets-popup-overlay').remove();
     });
 
-    $('#close-assets-popup').on('click', function(event) {
+    $(document).on('click', '#close-assets-popup',function(event) {
       event.preventDefault();
       $('.assets-popup-overlay').remove();
     });
