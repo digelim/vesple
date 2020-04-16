@@ -14762,7 +14762,7 @@ function update_portfolio_investment() {
 	$inflation = floatval( $_POST['inflation'] );
 	$regular_investment_growth_rate = floatval( $_POST['regular-investment-growth-rate'] );
 	$investment_interval = $regular_investment ? intval( $_POST['investment-interval'] ) : 0;
-	$investment_amount = $regular_investment ? floatval( $_POST['investment-amount'] ) : 0;
+	$investment_amount = $regular_investment ? $_POST['investment-amount'] : 0;
 	$post_id = intval( $_POST['post_id'] );
 	$user_can_update = ( get_current_user_id() == get_post($post_id)->post_author ) || ( get_current_user_id() === 1 );
 
