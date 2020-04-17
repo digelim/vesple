@@ -25,7 +25,7 @@ get_header();
   <div class="header-content p-t-150 p-b-150 row no-gutters justify-content-between align-items-center">
     <div class="col-md-6">
       <h1 class="medium m-b-20 color-primary" style="font-size: 58px;">Get the most out of the <span class="txt-type" data-wait="1500" data-words='["Stocks", "Crypto", "Forex", "Funds", "Index"]'></span> market</h1>
-      <p class="subtitle medium m-b-20" style="font-size: 20px;">Whether you are an investor or looking for getting started, Vesple helps you reduce the risk of your stocks and turn your low performance portfolio into a highly profitable gold mine</p>
+      <p class="subtitle medium m-b-20" style="font-size: 20px;">Whether you are an investor or looking for getting started, Vesple helps you reduce the risk of your assets and turn your low performance portfolio into a highly profitable gold mine.</p>
       <a href="<?php echo home_url('my-account'); ?>?register" class="btn-primary btn-large btn-round">START FOR FREE</a>
     </div>
     <div class="col-md-6">
@@ -46,7 +46,7 @@ get_header();
     <div class="benefits-col col-md-4">
       <img class="m-b-30" src="<?php echo bloginfo('stylesheet_directory'); ?>/img/search.svg" alt="Image">
       <h5 class="m-b-15">Build your portfolio</h5>
-      <p class="large">Discover the flaws and potential of each of the stocks you have chosen.</p>
+      <p class="large">Discover the flaws and potential of each of the assets you have chosen.</p>
     </div>
     <div class="benefits-col col-md-4">
       <img class="m-b-30" src="<?php echo bloginfo('stylesheet_directory'); ?>/img/charts.svg" alt="image">
@@ -80,7 +80,7 @@ get_header();
 	      <h3 class="m-b-20">By the Nobel Prize winner</h3>
 	      <p class="subtitle large" style="
 	  padding-bottom: 110px;
-	">Optimize your stocks portfolio through the algorithm developed by the Nobel Prize in Economics, Harry Markowitz. Generate the best possible results whithout complex spreadsheets, and no crazy calculations.</p>
+	">Optimize your investment portfolio through the algorithm developed by the Nobel Prize in Economics, Harry Markowitz. Generate the best possible results whithout complex spreadsheets, and no crazy calculations.</p>
 	    </div>
 	    <div class="col-md-6 feature-col">
 	      <img src="<?php echo bloginfo('stylesheet_directory'); ?>/img/screen-1.png" alt="Image">
