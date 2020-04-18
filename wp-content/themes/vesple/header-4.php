@@ -38,6 +38,14 @@
 	<!-- End of Async Drift Code -->
 	<?php
 	} ?>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-161453820-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	  gtag('config', 'UA-161453820-1');
+	</script>
 	<!-- Hotjar Tracking Code for vesple.com -->
 	<script>
 	    (function(h,o,t,j,a,r){
@@ -48,14 +56,6 @@
 	        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
 	        a.appendChild(r);
 	    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-	</script>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-161453820-1"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-	  gtag('config', 'UA-161453820-1');
 	</script>
 </head>
 
