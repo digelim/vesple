@@ -285,7 +285,7 @@ jQuery(document).ready(function($) {
     appendAsset(assetsToLoad[i].symbol, assetsToLoad[i].name, assetsToLoad[i].quantity);
   }
 
-  $('form').on('submit', function(event) {
+  $(document).on('submit', 'form', function(event) {
     if ($('[name="symbols[]"]').length === 0) {
       event.preventDefault();
       alert('Please, add at least one asset to your portfolio.');
