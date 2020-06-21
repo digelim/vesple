@@ -13719,7 +13719,8 @@ function has_available_credits( $credits, $user_id = null ) {
 
 	$has_availabe_credits = ( $usage / $months ) < $credits ? true : false;
 
-	return $has_availabe_credits;
+	// return $has_availabe_credits;
+	return true;
 }
 
 function update_usage( $amount, $user_id = null ) {
