@@ -96,7 +96,7 @@ foreach ( $assets as $key => $asset ) {
           <div class="header mobile m-t-50 m-b-80">
             <div class="left">
               <h1 class="label-l2"><?php echo get_the_title( $post_id ); ?></h1>
-              <a href="/wizard/{{_id}}/assets" id="edit" class="btn btn-primary btn-small">Edit</a>
+              <a href="/portfolio/<?php echo $post_id; ?>/assets" id="edit" class="btn btn-primary btn-small">Edit</a>
             </div>
             <div class="right">
               <span class="date m-l-20 label-s2"><?php echo get_the_date( 'Y-m-d', $post_id ); ?></span>
