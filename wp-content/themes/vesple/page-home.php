@@ -13,8 +13,7 @@ get_header();
 				<img src="<?php echo bloginfo('stylesheet_directory'); ?>/img/vesple-dark.svg" alt="Image">
 			</div>
 			<div class="menu-login">
-				<a href="<?php echo home_url('my-account') ?>">Sign in</a>
-				<a class="btn-primary btn-small" href="<?php echo home_url('my-account') ?>?register">Sign up</a>
+				<a href="https://play.google.com/store/apps/details?id=com.app.vesple"> <img src="<?php echo bloginfo('stylesheet_directory'); ?>/img/download-android.png" alt="Image" width="140"></a>
 			</div>
 		</div>
 	</div>
@@ -26,7 +25,7 @@ get_header();
     <div class="col-md-6">
       <h1 class="medium m-b-20 color-primary" style="font-size: 58px;">Get the most out of the <span class="txt-type" data-wait="1500" data-words='["Stocks", "Crypto", "Forex", "Funds", "Index"]'></span> market</h1>
       <p class="subtitle medium m-b-20" style="font-size: 20px;">Whether you are an investor or looking for getting started, Vesple helps you reduce the risk of your assets and turn your low performance portfolio into a highly profitable gold mine.</p>
-      <a href="<?php echo home_url('my-account'); ?>?register" class="btn-primary btn-large btn-round">START FOR FREE</a>
+      <a href="https://play.google.com/store/apps/details?id=com.app.vesple"> <img src="<?php echo bloginfo('stylesheet_directory'); ?>/img/download-android.png" alt="Image" width="180"></a>
     </div>
     <div class="col-md-6">
       <img src="<?php echo bloginfo('stylesheet_directory'); ?>/img/home-header.png" style="max-width: 720px;">
@@ -94,7 +93,7 @@ get_header();
 <section class="cta-section bg-img extra-paddings">
 	<div class="cta-container container align-center">
 	  <h3 class="m-b-40">Try the revolutionary tool that will help you achieve your goals</h3>
-	  <a href="<?php echo home_url('my-account'); ?>?register" class="btn primary large">Start for free</a>
+	  <a href="https://play.google.com/store/apps/details?id=com.app.vesple"> <img src="<?php echo bloginfo('stylesheet_directory'); ?>/img/download-android.png" alt="Image" width="180"></a>
 	</div>
 </section>
 <footer class="p-t-40 p-b-20">
@@ -104,8 +103,7 @@ get_header();
         <img src="<?php echo bloginfo('stylesheet_directory'); ?>/img/vesple.svg" alt="Vesple">
       </div>
       <div class="col align-right menu-login">
-				<a class="text-white" href="<?php echo home_url('my-account') ?>">Sign in</a>
-				<a class="btn-ghost btn-small" href="<?php echo home_url('my-account') ?>?register">Sign up</a>
+				<a href="https://play.google.com/store/apps/details?id=com.app.vesple"> <img src="<?php echo bloginfo('stylesheet_directory'); ?>/img/download-android.png" alt="Image" width="140"></a>
 			</div>
     </div>
 
