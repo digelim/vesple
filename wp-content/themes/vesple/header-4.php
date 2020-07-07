@@ -22,6 +22,7 @@
 	  function gtag(){dataLayer.push(arguments);}
 	  gtag('js', new Date());
 	  gtag('config', 'UA-161453820-1');
+		gtag('config', 'AW-968076197');
 	</script>
 	<!-- Hotjar Tracking Code for vesple.com -->
 	<script>
@@ -34,6 +35,22 @@
 	        a.appendChild(r);
 	    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 	</script>
+
+	<?php
+	if ( is_account_page() ) {
+		?>
+
+		<!-- Event snippet for Purchase conversion page -->
+		<script>
+		  gtag('event', 'conversion', {
+		      'send_to': 'AW-968076197/W2zNCIqszdYBEKXXzs0D',
+		      'transaction_id': ''
+		  });
+		</script>
+
+		<?php
+	}
+	?>
 </head>
 
 <body <?php body_class(); ?>>
