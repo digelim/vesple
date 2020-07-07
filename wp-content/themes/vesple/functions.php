@@ -13323,7 +13323,7 @@ function create_cron_jobs() {
 	}
 }
 
-add_action( 'wp_loaded', 'wp_loaded_actions' );
+//add_action( 'wp_loaded', 'wp_loaded_actions' );
 function wp_loaded_actions() {
 	for ($i=0; $i < 47; $i++) {
 		add_action( 'get_historical_data_' . $i, function( $offset ) {
